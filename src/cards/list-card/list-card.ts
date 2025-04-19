@@ -1,9 +1,9 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightCardConfig } from "./flight-card-config";
+import { FlightListCardConfig } from "./list-card-config";
 import { formatTime } from "../../utils/format-time";
-import { FLIGHT_CARD_NAME } from "./const";
+import { FLIGHT_LIST_CARD_NAME } from "./const";
 import { registerCustomCard } from "../../utils/custom-cards";
 import { PropertyValues } from "lit";
 import setupCustomlocalize from "../../localize";
@@ -29,29 +29,29 @@ interface Flight {
     heading?: number;
 }
 
-@customElement(FLIGHT_CARD_NAME)
-export class FlightCard extends LitElement {
+@customElement(FLIGHT_LIST_CARD_NAME)
+export class FlightListCard extends LitElement {
     @property({ attribute: false }) public hass!: HomeAssistant;
 
-    @state() private _config?: FlightCardConfig;
+    @state() private _config?: FlightListCardConfig;
     @state() private _flights: Flight[] = [];
     @state() private _expanded: boolean = false;
     private _localize!: (key: string) => string;
 
     public static getConfigElement() {
-        return document.createElement("flight-card-editor");
+        return document.createElement("flight-list-card-editor");
     }
 
-    public static getStubConfig(/*hass: HomeAssistant*/): FlightCardConfig {
+    public static getStubConfig(/*hass: HomeAssistant*/): FlightListCardConfig {
         return {
-            type: FLIGHT_CARD_NAME,
+            type: FLIGHT_LIST_CARD_NAME,
             entity: "sensor.flightradar24_current_in_area",
             name: "Current Flights In Area",
             max_flights: 5
         };
     }
 
-    public setConfig(config: FlightCardConfig): void {
+    public setConfig(config: FlightListCardConfig): void {
         if (!config.entity) {
             return;
         }
@@ -351,7 +351,7 @@ export class FlightCard extends LitElement {
 }
 
 registerCustomCard({
-    type: FLIGHT_CARD_NAME,
-    name: "Flight Card",
-    description: "Card for displaying flight information"
+    type: FLIGHT_LIST_CARD_NAME,
+    name: "Flight Tracker | List Card",
+    description: "Card for displaying flight list"
 }); 

@@ -1,6 +1,6 @@
 import { version } from "../package.json";
 
-import "./cards/flight-card/flight-card";
+import "./cards/list-card/list-card";
 
 console.info(
   `%c✈️ Flight Tracker Cards ✈️ - ${version}`,

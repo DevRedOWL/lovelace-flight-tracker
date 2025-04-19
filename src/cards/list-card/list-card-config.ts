@@ -1,4 +1,4 @@
-export interface FlightCardConfig {
+export interface FlightListCardConfig {
     type: string;
     entity: string;
     name?: string;

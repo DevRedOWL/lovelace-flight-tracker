@@ -1,17 +1,17 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightCardConfig } from "./flight-card-config";
+import { FlightListCardConfig } from "./list-card-config";
 import setupCustomlocalize from "../../localize";
 
 @customElement("flight-card-editor")
 export class FlightCardEditor extends LitElement {
     @property({ attribute: false }) public hass!: HomeAssistant;
 
-    @state() private _config?: FlightCardConfig;
+    @state() private _config?: FlightListCardConfig;
     private _localize!: (key: string) => string;
 
-    public setConfig(config: FlightCardConfig): void {
+    public setConfig(config: FlightListCardConfig): void {
         this._config = config;
         this._localize = setupCustomlocalize(this.hass);
     }

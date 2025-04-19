@@ -1,15 +1,15 @@
-# Flight card
+# Flight list card
 
 <table>
   <tr>
-    <td><img src="../images/flight-card-light.png" alt="Flight card light theme" width="400"></td>
-    <td><img src="../images/flight-card-dark.png" alt="Flight card dark theme" width="400"></td>
+    <td><img src="../images/flight-card-light.png" alt="Flight list card light theme" width="400"></td>
+    <td><img src="../images/flight-card-dark.png" alt="Flight list card dark theme" width="400"></td>
   </tr>
 </table>
 
 ## Description
 
-A flight card allows you to display and monitor flight information from various sources. It supports both live and historical flight data, showing details such as flight number, airline, aircraft, route, schedule, and real-time metrics.
+A flight list card allows you to display and monitor flight information from various sources. It supports both live and historical flight data, showing details such as flight number, airline, aircraft, route, schedule, and real-time metrics.
 
 ## Configuration variables
 
@@ -85,7 +85,7 @@ The card expects flight data in the following format:
 ## Example Configuration
 
 ```yaml
-type: custom:flight-card
+type: custom:flight-tracker-list-card
 entity: sensor.flightradar24_current_in_area
 name: "Current Flights"
 max_flights: 5

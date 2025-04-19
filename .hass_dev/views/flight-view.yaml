@@ -2,7 +2,7 @@ title: Flight Tracker
 icon: mdi:airplane
 path: flight-tracker
 cards:
-  - type: custom:flight-card
+  - type: custom:flight-tracker-list-card
     entity: sensor.flightradar24_current_in_area
     max_flights: 10
     name: "Current Flights"
