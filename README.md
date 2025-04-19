@@ -20,6 +20,18 @@ Flight Tracker Cards is a collection of cards for [Home Assistant][home-assistan
 - 🌓 Light and dark theme support
 - 🚀 Easy to use and configure
 
+## Data Source
+
+Flight Tracker Cards works with the [Flightradar24 Integration](https://github.com/AlexandrErohin/home-assistant-flightradar24), a custom component for Home Assistant that provides real-time flight tracking data. This integration allows you to:
+
+- Track flights in a specific area
+- Monitor particular aircraft
+- Get information about the most tracked flights
+- Receive notifications for flight events
+- Create automations based on flight data
+
+No Flightradar24 subscription is required to use this integration. For more details, see the [Data Sources documentation](docs/data-sources.md).
+
 ## Installation
 
 ### HACS
@@ -34,7 +46,7 @@ Flight Tracker Cards is available in [HACS][hacs] (Home Assistant Community Stor
 4. Select "Custom repositories"
 5. Add the following repository:
    - Repository: `DevRedOWL/lovelace-flight-tracker`
-   - Category: `Lovelace`
+   - Category: `Dashboard`
 6. Click "Add"
 7. Find "Flight Tracker Cards" in the list and click "Download"
 
@@ -65,14 +77,11 @@ All the Flight Tracker cards can be configured using Dashboard UI editor.
 
 Different cards are available for different flight tracking needs:
 
-- 🗺️ [Flight List Card](docs/cards/flight-card.md): Show a list of flights in a specific area.
+- 🗺️ [Flight List Card](docs/cards/list-card.md): Show a list of flights in a specific area.
 
-  ```yaml
-  type: custom:flight-tracker-list-card
-  entity: sensor.flightradar24_current_in_area
-  name: "Current Flights"
-  max_flights: 5
-  ```
+### Data Sources
+
+Flight Tracker Cards supports various data sources for flight tracking. See the [Data Sources documentation](docs/data-sources.md) for more information.
 
 ## Development
 
