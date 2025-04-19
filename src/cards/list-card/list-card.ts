@@ -1,7 +1,7 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightListCardConfig } from "./list-card-config";
+import { FlightListCardConfig, DisplayField } from "./list-card-config";
 import { formatTime } from "../../utils/format-time";
 import { FLIGHT_LIST_CARD_NAME } from "./const";
 import { registerCustomCard } from "../../utils/custom-cards";
@@ -162,6 +162,11 @@ export class FlightListCard extends LitElement {
     private _renderFlight(flight: Flight): TemplateResult {
         const isLive = flight.tracked_type !== "historical";
         const heading = flight.heading || 0;
+        const displayFields = this._config?.display_fields || [];
+        
+        // Helper function to check if a field should be displayed
+        const shouldDisplay = (field: DisplayField) => 
+            displayFields.length === 0 || displayFields.includes(field);
         
         return html`
             <div class="flight ${isLive ? "live" : "historical"}">
@@ -179,8 +184,10 @@ export class FlightListCard extends LitElement {
                     ` : ''}
                     <span class="flight-number">${flight.flight_number}</span>
                     <span class="airline">${flight.airline || ''}</span>
-                    <span class="aircraft">${flight.aircraft_model || ''}</span>
-                    ${isLive && flight.heading !== undefined ? html`
+                    ${shouldDisplay(DisplayField.AIRCRAFT_MODEL) ? html`
+                        <span class="aircraft">${flight.aircraft_model || ''}</span>
+                    ` : ''}
+                    ${isLive && flight.heading !== undefined && shouldDisplay(DisplayField.HEADING_ICON) ? html`
                         <ha-icon 
                             icon="mdi:airplane" 
                             class="heading-icon"
@@ -197,22 +204,27 @@ export class FlightListCard extends LitElement {
                                 <ha-icon icon="mdi:arrow-right"></ha-icon>
                                 ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code)}
                             </div>
-                            <div class="schedule">
-                                ${flight.time_scheduled_departure
-                                    ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
-                                    : ""}
-                                ${flight.time_scheduled_arrival
-                                    ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
-                                    : ""}
-                            </div>
-                            ${flight.altitude !== undefined && flight.ground_speed !== undefined
-                                ? html`
-                                    <div class="stats">
+                            ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
+                                <div class="schedule">
+                                    ${flight.time_scheduled_departure
+                                        ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
+                                        : ""}
+                                    ${flight.time_scheduled_arrival
+                                        ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
+                                        : ""}
+                                </div>
+                            ` : ''}
+                            ${(shouldDisplay(DisplayField.ALTITUDE) || shouldDisplay(DisplayField.SPEED)) && 
+                              (flight.altitude !== undefined || flight.ground_speed !== undefined) ? html`
+                                <div class="stats">
+                                    ${shouldDisplay(DisplayField.ALTITUDE) && flight.altitude !== undefined ? html`
                                         <div>${this._localize("card.flight.altitude")}: ${flight.altitude} ${this._localize("card.flight.feet")} (${Math.round(flight.altitude * 0.3048)} ${this._localize("card.flight.meters")})</div>
+                                    ` : ''}
+                                    ${shouldDisplay(DisplayField.SPEED) && flight.ground_speed !== undefined ? html`
                                         <div>${this._localize("card.flight.speed")}: ${flight.ground_speed} ${this._localize("card.flight.knots")} (${Math.round(flight.ground_speed * 1.852)} ${this._localize("card.flight.kmh")})</div>
-                                    </div>
-                                `
-                                : ""}
+                                    ` : ''}
+                                </div>
+                            ` : ''}
                         </div>
                     `
                     : ""}

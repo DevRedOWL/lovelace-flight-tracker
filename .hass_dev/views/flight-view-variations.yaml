@@ -1,0 +1,67 @@
+title: Flight Tracker Variations
+icon: mdi:airplane-settings
+path: flight-tracker-variations
+cards:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: |
+          # Flight Tracker Card Variations
+          Different configurations of the flight tracker card showing various display field combinations.
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "Basic Info"
+        display_fields: []
+
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "Live Data"
+        display_fields:
+          - altitude
+          - speed
+          - heading_icon
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "Schedule Only"
+        display_fields:
+          - departure_arrival_time
+
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "Aircraft Details"
+        display_fields:
+          - aircraft_model
+          - altitude
+          - speed
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "Navigation"
+        display_fields:
+          - heading_icon
+          - altitude
+          - speed
+
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: "All Fields"
+        display_fields:
+          - departure_arrival_time
+          - altitude
+          - speed
+          - heading_icon
+          - aircraft_model 

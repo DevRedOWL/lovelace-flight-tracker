@@ -20,6 +20,19 @@ All the options are available in the lovelace editor but you can use `yaml` if y
 | `entity`           | string  | Required| Entity that provides flight data (e.g. sensor.flightradar24_current_in_area)        |
 | `name`             | string  | Optional| Custom name for the card                                                            |
 | `max_flights`      | number  | 5       | Maximum number of flights to show before displaying a "Show More" button            |
+| `display_fields`   | array   | Optional| Array of fields to display (all fields shown by default if not specified)           |
+
+### Display Fields
+
+The following fields can be included in the `display_fields` array:
+
+| Field Name              | Description                                                                         |
+| :---------------------- | :---------------------------------------------------------------------------------- |
+| `departure_arrival_time`| Show departure and arrival times                                                    |
+| `altitude`             | Show current altitude                                                               |
+| `speed`                | Show current ground speed                                                           |
+| `heading_icon`         | Show heading indicator for live flights                                             |
+| `aircraft_model`       | Show aircraft model                                                                 |
 
 ## Flight Data Structure
 
@@ -81,14 +94,49 @@ The card expects flight data in the following format:
 - Supports both live and historical flight data
 - Responsive design that works well in different layouts
 - Light and dark theme support
+- Customizable display fields
 
-## Example Configuration
+## Example Configurations
 
+### Basic Configuration
 ```yaml
 type: custom:flight-tracker-list-card
 entity: sensor.flightradar24_current_in_area
 name: "Current Flights"
 max_flights: 5
+```
+
+### Custom Display Fields
+```yaml
+type: custom:flight-tracker-list-card
+entity: sensor.flightradar24_current_in_area
+name: "Current Flights"
+max_flights: 5
+display_fields:
+  - departure_arrival_time
+  - aircraft_model
+  - heading_icon
+```
+
+### Minimal Display
+```yaml
+type: custom:flight-tracker-list-card
+entity: sensor.flightradar24_current_in_area
+name: "Current Flights"
+max_flights: 5
+display_fields: []  # Shows only basic flight info
+```
+
+### Live Data Focus
+```yaml
+type: custom:flight-tracker-list-card
+entity: sensor.flightradar24_current_in_area
+name: "Current Flights"
+max_flights: 5
+display_fields:
+  - altitude
+  - speed
+  - heading_icon
 ```
 
 ## Troubleshooting
