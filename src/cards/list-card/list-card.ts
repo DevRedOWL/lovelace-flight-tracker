@@ -44,7 +44,7 @@ export class FlightListCard extends LitElement {
 
     public static getStubConfig(/*hass: HomeAssistant*/): FlightListCardConfig {
         return {
-            type: FLIGHT_LIST_CARD_NAME,
+            type: `custom:${FLIGHT_LIST_CARD_NAME}`,
             entity: "sensor.flightradar24_current_in_area",
             name: "Current Flights In Area",
             max_flights: 5
