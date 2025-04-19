@@ -4,4 +4,5 @@ path: flight-tracker
 cards:
   - type: custom:flight-card
     entity: sensor.flightradar24_current_in_area
+    max_flights: 10
     name: "Current Flights"

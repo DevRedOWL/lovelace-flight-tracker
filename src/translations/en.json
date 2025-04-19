@@ -12,7 +12,9 @@
       "knots": "kts",
       "kmh": "km/h",
       "live": "Live",
-      "historical": "Historical"
+      "historical": "Historical",
+      "show_more": "Show More",
+      "max_flights": "Maximum number of flights to show"
     }
   }
 } 

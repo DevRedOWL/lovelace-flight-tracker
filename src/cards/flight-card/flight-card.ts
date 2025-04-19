@@ -35,6 +35,7 @@ export class FlightCard extends LitElement {
 
     @state() private _config?: FlightCardConfig;
     @state() private _flights: Flight[] = [];
+    @state() private _expanded: boolean = false;
     private _localize!: (key: string) => string;
 
     public static getConfigElement() {
@@ -45,7 +46,8 @@ export class FlightCard extends LitElement {
         return {
             type: FLIGHT_CARD_NAME,
             entity: "sensor.flightradar24_current_in_area",
-            name: "Current Flights In Area"
+            name: "Current Flights In Area",
+            max_flights: 5
         };
     }
 
@@ -114,7 +116,9 @@ export class FlightCard extends LitElement {
         }
 
         const flights = Array.isArray(this._flights) ? this._flights : [];
-        const entity = this.hass.states[this._config.entity];
+        const maxFlights = this._config.max_flights || 5;
+        const showMore = flights.length > maxFlights && !this._expanded;
+        const displayedFlights = showMore ? flights.slice(0, maxFlights) : flights;
         
         return html`
             <ha-card @click=${this._handleClick}>
@@ -123,7 +127,17 @@ export class FlightCard extends LitElement {
                     <div class="count">${this._localize("card.flight.flights_count").replace("{count}", flights.length.toString())}</div>
                 </div>
                 <div class="card-content">
-                    ${flights.map((flight: Flight) => this._renderFlight(flight))}
+                    ${displayedFlights.map((flight: Flight) => this._renderFlight(flight))}
+                    ${showMore ? html`
+                        <div class="show-more">
+                            <mwc-button 
+                                @click=${this._toggleExpanded}
+                                class="show-more-button"
+                            >
+                                ${this._localize("card.flight.show_more")}
+                            </mwc-button>
+                        </div>
+                    ` : ''}
                 </div>
             </ha-card>
         `;
@@ -138,6 +152,11 @@ export class FlightCard extends LitElement {
         });
         (event as any).detail = { entityId: this._config.entity };
         this.dispatchEvent(event);
+    }
+
+    private _toggleExpanded(e: Event): void {
+        e.stopPropagation();
+        this._expanded = !this._expanded;
     }
 
     private _renderFlight(flight: Flight): TemplateResult {
@@ -318,6 +337,14 @@ export class FlightCard extends LitElement {
                 height: 24px;
                 transition: transform 0.3s ease;
                 color: var(--primary-text-color);
+            }
+            .show-more {
+                display: flex;
+                justify-content: center;
+                margin-top: 16px;
+            }
+            .show-more-button {
+                --mdc-theme-primary: var(--primary-color);
             }
         `;
     }

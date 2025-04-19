@@ -19,6 +19,7 @@ All the options are available in the lovelace editor but you can use `yaml` if y
 | :------------------ | :------ | :------ | :---------------------------------------------------------------------------------- |
 | `entity`           | string  | Required| Entity that provides flight data (e.g. sensor.flightradar24_current_in_area)        |
 | `name`             | string  | Optional| Custom name for the card                                                            |
+| `max_flights`      | number  | 5       | Maximum number of flights to show before displaying a "Show More" button            |
 
 ## Flight Data Structure
 
@@ -87,6 +88,7 @@ The card expects flight data in the following format:
 type: custom:flight-card
 entity: sensor.flightradar24_current_in_area
 name: "Current Flights"
+max_flights: 5
 ```
 
 ## Troubleshooting
