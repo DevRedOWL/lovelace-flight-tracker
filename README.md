@@ -26,39 +26,28 @@ Flight Tracker Cards is a collection of cards for [Home Assistant][home-assistan
 
 Flight Tracker Cards is available in [HACS][hacs] (Home Assistant Community Store).
 
-<!-- #### Method 1: Direct Link
-Use this link to directly go to the repository in HACS
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DevRedOWL&repository=flight-tracker-cards)
-
-#### Method 2: Search Installation
-1. Install HACS if you don't have it already
-2. Open HACS in Home Assistant
-3. Search for "Flight Tracker Cards"
-4. Click the download button. ⬇️ -->
-
 #### Custom Repository
 1. Open HACS in Home Assistant
 2. Go to the "Integrations" tab
 3. Click the three dots menu in the top right corner
 4. Select "Custom repositories"
 5. Add the following repository:
-   - Repository: `DevRedOWL/flight-tracker-cards`
+   - Repository: `DevRedOWL/lovelace-flight-tracker`
    - Category: `Lovelace`
 6. Click "Add"
 7. Find "Flight Tracker Cards" in the list and click "Download"
 
 ### Manual
 
-1. Download `flight-tracker-cards.js` file from the [latest release][release-url].
-2. Put `flight-tracker-cards.js` file into your `config/www` folder.
-3. Add reference to `flight-tracker-cards.js` in Dashboard. There's two way to do that:
-    - **Using UI:** _Settings_ → _Dashboards_ → _More Options icon_ → _Resources_ → _Add Resource_ → Set _Url_ as `/local/flight-tracker-cards.js` → Set _Resource type_ as `JavaScript Module`.
+1. Download `flighttracker.js` file from the [latest release][release-url].
+2. Put `flighttracker.js` file into your `config/www` folder.
+3. Add reference to `flighttracker.js` in Dashboard. There's two way to do that:
+    - **Using UI:** _Settings_ → _Dashboards_ → _More Options icon_ → _Resources_ → _Add Resource_ → Set _Url_ as `/local/flighttracker.js` → Set _Resource type_ as `JavaScript Module`.
       **Note:** If you do not see the Resources menu, you will need to enable _Advanced Mode_ in your _User Profile_
     - **Using YAML:** Add following code to `lovelace` section.
         ```yaml
         resources:
-            - url: /local/flight-tracker-cards.js
+            - url: /local/flighttracker.js
               type: module
         ```
 
@@ -110,7 +99,7 @@ Server will start on port `4000`.
 
 ### Build
 
-You can build the `flight-tracker-cards.js` file in `dist` folder by running the build command.
+You can build the `flighttracker.js` file in `dist` folder by running the build command.
 
 ```sh
 npm run build
@@ -124,7 +113,7 @@ npm run build
 2. Check that you have the latest Flight Tracker Cards version on HACS
 3. Check that you have the latest Flight Tracker Cards version by checking the browser console
 4. Clear your cache:
-    - delete flight-tracker-cards resources
+    - delete flighttracker resources
     - uninstall Flight Tracker Cards from HACS
     - reinstall Flight Tracker Cards from HACS
 
@@ -136,13 +125,13 @@ Created and maintained by [DevRedOWL](https://github.com/DevRedOWL)
 
 [hacs-url]: https://github.com/hacs/integration
 [hacs-badge]: https://img.shields.io/badge/hacs-default-orange.svg?style=flat-square
-[release-badge]: https://img.shields.io/github/v/release/DevRedOWL/flight-tracker-cards?style=flat-square
-[downloads-badge]: https://img.shields.io/github/downloads/DevRedOWL/flight-tracker-cards/total?style=flat-square
-[build-badge]: https://img.shields.io/github/actions/workflow/status/DevRedOWL/flight-tracker-cards/build.yml?branch=main&style=flat-square
+[release-badge]: https://img.shields.io/github/v/release/DevRedOWL/lovelace-flight-tracker?style=flat-square
+[downloads-badge]: https://img.shields.io/github/downloads/DevRedOWL/lovelace-flight-tracker/total?style=flat-square
+[build-badge]: https://img.shields.io/github/actions/workflow/status/DevRedOWL/lovelace-flight-tracker/build.yml?branch=main&style=flat-square
 
 <!-- References -->
 
 [home-assistant]: https://www.home-assistant.io/
 [hacs]: https://hacs.xyz
-[release-url]: https://github.com/DevRedOWL/flight-tracker-cards/releases
+[release-url]: https://github.com/DevRedOWL/lovelace-flight-tracker/releases
 [plugin-requirements]: https://www.hacs.xyz/docs/publish/plugin/#requirements
