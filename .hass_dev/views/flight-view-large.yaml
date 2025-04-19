@@ -1,0 +1,7 @@
+title: Large Flight Tracker
+icon: mdi:airplane-plus
+path: flight-tracker-large
+cards:
+  - type: custom:flight-card
+    entity: sensor.flightradar24_large_in_area
+    name: "Current Flights"

@@ -1,0 +1,8 @@
+  mode: storage
+  dashboards:
+    flight-tracker-showcase:
+      mode: yaml
+      title: Showcase
+      icon: mdi:airplane
+      show_in_sidebar: true
+      filename: flight-tracker-showcase.yaml

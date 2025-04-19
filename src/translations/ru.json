@@ -1,0 +1,18 @@
+{
+  "card": {
+    "flight": {
+      "title": "Рейсы",
+      "flights_count": "{count} рейсов",
+      "departure": "Вылет",
+      "arrival": "Прилёт",
+      "altitude": "Высота",
+      "speed": "Скорость",
+      "feet": "футов",
+      "meters": "м",
+      "knots": "узлов",
+      "kmh": "км/ч",
+      "live": "В полёте",
+      "historical": "Исторический"
+    }
+  }
+} 

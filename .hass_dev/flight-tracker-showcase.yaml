@@ -1,0 +1,4 @@
+title: Flight Tracker Showcase 
+views:
+  - !include views/flight-view.yaml
+  - !include views/flight-view-large.yaml

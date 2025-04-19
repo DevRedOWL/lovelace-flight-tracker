@@ -1,0 +1,18 @@
+{
+  "card": {
+    "flight": {
+      "title": "Flights",
+      "flights_count": "{count} flights",
+      "departure": "Departure",
+      "arrival": "Arrival",
+      "altitude": "Altitude",
+      "speed": "Speed",
+      "feet": "ft",
+      "meters": "m",
+      "knots": "kts",
+      "kmh": "km/h",
+      "live": "Live",
+      "historical": "Historical"
+    }
+  }
+} 
