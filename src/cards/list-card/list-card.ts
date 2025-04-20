@@ -47,6 +47,8 @@ export class FlightListCard extends LitElement {
             type: `custom:${FLIGHT_LIST_CARD_NAME}`,
             entity: "sensor.flightradar24_current_in_area",
             name: "Current Flights In Area",
+            show_header: true,
+            display_fields: [DisplayField.AIRCRAFT_MODEL, DisplayField.DEPARTURE_ARRIVAL_TIME, DisplayField.ALTITUDE, DisplayField.SPEED, DisplayField.HEADING_ICON],
             max_flights: 5
         };
     }
@@ -122,10 +124,12 @@ export class FlightListCard extends LitElement {
         
         return html`
             <ha-card @click=${this._handleClick}>
-                <div class="card-header">
-                    <div class="name">${this._config.name || this._localize("card.flight.title")}</div>
-                    <div class="count">${this._localize("card.flight.flights_count").replace("{count}", flights.length.toString())}</div>
-                </div>
+                ${this._config?.show_header !== false ? html`
+                    <div class="card-header">
+                        <div class="name">${this._config.name || this._localize("card.flight.title")}</div>
+                        <div class="count">${this._localize("card.flight.flights_count").replace("{count}", flights.length.toString())}</div>
+                    </div>
+                ` : ''}
                 <div class="card-content">
                     ${displayedFlights.map((flight: Flight) => this._renderFlight(flight))}
                     ${showMore ? html`
@@ -162,11 +166,11 @@ export class FlightListCard extends LitElement {
     private _renderFlight(flight: Flight): TemplateResult {
         const isLive = flight.tracked_type !== "historical";
         const heading = flight.heading || 0;
-        const displayFields = this._config?.display_fields || [];
+        const displayFields = this._config?.display_fields;
         
         // Helper function to check if a field should be displayed
         const shouldDisplay = (field: DisplayField) => 
-            displayFields.length === 0 || displayFields.includes(field);
+            !displayFields || displayFields.includes(field);
         
         return html`
             <div class="flight ${isLive ? "live" : "historical"}">

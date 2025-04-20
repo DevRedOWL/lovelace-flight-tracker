@@ -12,4 +12,5 @@ export interface FlightListCardConfig {
     name?: string;
     max_flights?: number;
     display_fields?: DisplayField[];
+    show_header?: boolean;
 } 

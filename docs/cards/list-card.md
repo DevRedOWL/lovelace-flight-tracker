@@ -21,6 +21,7 @@ All the options are available in the lovelace editor but you can use `yaml` if y
 | `name`             | string  | Optional| Custom name for the card                                                            |
 | `max_flights`      | number  | 5       | Maximum number of flights to show before displaying a "Show More" button            |
 | `display_fields`   | array   | Optional| Array of fields to display (all fields shown by default if not specified)           |
+| `show_header`      | boolean | true    | Whether to show the card header with name and flight count                         |
 
 ### Display Fields
 

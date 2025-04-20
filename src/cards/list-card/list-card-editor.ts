@@ -51,6 +51,15 @@ export class FlightCardEditor extends LitElement {
                         @value-changed=${this._valueChanged}
                     ></paper-input>
                 </div>
+                <div class="config-row">
+                    <ha-switch
+                        .checked=${this._config?.show_header !== false}
+                        .configValue=${"show_header"}
+                        @change=${this._valueChanged}
+                    >
+                        <span>${this._localize("card.flight.show_header")}</span>
+                    </ha-switch>
+                </div>
             </div>
         `;
     }
