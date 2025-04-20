@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Letadla v oblasti",
       "title": "Letadla",
-      "flights_count": "{count} letů",
+      "flights_count": "Lety: {count}",
       "departure": "Odlet",
       "arrival": "Přílet",
       "altitude": "Výška",

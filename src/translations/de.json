@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Flüge in der Umgebung",
       "title": "Flüge",
-      "flights_count": "{count} Flüge",
+      "flights_count": "Flüge: {count}",
       "departure": "Abflug",
       "arrival": "Ankunft",
       "altitude": "Höhe",

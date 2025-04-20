@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Loty w okolicy",
       "title": "Loty",
-      "flights_count": "{count} lotów",
+      "flights_count": "Loty: {count}",
       "departure": "Wylot",
       "arrival": "Przylot",
       "altitude": "Wysokość",

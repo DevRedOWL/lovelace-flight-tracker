@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "지역 내 항공편",
       "title": "항공편",
-      "flights_count": "{count} 항공편",
+      "flights_count": "항공편: {count}",
       "departure": "출발",
       "arrival": "도착",
       "altitude": "고도",

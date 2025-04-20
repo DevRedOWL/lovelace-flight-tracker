@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Lennot alueella",
       "title": "Lennot",
-      "flights_count": "{count} lentoa",
+      "flights_count": "Lennöt: {count}",
       "departure": "Lähtö",
       "arrival": "Saapuminen",
       "altitude": "Korkeus",

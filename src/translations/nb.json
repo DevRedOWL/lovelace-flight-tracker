@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Fly i området",
       "title": "Fly",
-      "flights_count": "{count} fly",
+      "flights_count": "Fly: {count}",
       "departure": "Avgang",
       "arrival": "Ankomst",
       "altitude": "Høyde",

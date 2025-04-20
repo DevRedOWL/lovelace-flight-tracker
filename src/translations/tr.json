@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Bölgedeki uçuşlar",
       "title": "Uçuşlar",
-      "flights_count": "{count} uçuş",
+      "flights_count": "Uçuşlar: {count}",
       "departure": "Kalkış",
       "arrival": "Varış",
       "altitude": "İrtifa",

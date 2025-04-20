@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Полети в района",
       "title": "Полети",
-      "flights_count": "{count} полета",
+      "flights_count": "Полети: {count}",
       "departure": "Излитане",
       "arrival": "Пристигане",
       "altitude": "Височина",

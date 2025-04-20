@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Πτήσεις στην περιοχή",
       "title": "Πτήσεις",
-      "flights_count": "{count} πτήσεις",
+      "flights_count": "Πτήσεις: {count}",
       "departure": "Αναχώρηση",
       "arrival": "Άφιξη",
       "altitude": "Υψόμετρο",

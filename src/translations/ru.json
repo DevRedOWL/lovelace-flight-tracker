@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Рейсы в районе",
       "title": "Рейсы",
-      "flights_count": "{count} рейсов",
+      "flights_count": "Рейсов: {count}",
       "departure": "Вылет",
       "arrival": "Прилёт",
       "altitude": "Высота",

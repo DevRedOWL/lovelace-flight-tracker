@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "טיסות באזור",
       "title": "טיסות",
-      "flights_count": "{count} טיסות",
+      "flights_count": "טיסות: {count}",
       "departure": "יציאה",
       "arrival": "הגעה",
       "altitude": "גובה",

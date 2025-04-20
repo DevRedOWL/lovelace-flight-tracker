@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Repülők a területen",
       "title": "Repülők",
-      "flights_count": "{count} repülő",
+      "flights_count": "Repülők: {count}",
       "departure": "Indulás",
       "arrival": "Érkezés",
       "altitude": "Magasság",

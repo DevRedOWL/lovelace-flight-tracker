@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Vuelos en la zona",
       "title": "Vuelos",
-      "flights_count": "{count} vuelos",
+      "flights_count": "Vuelos: {count}",
       "departure": "Salida",
       "arrival": "Llegada",
       "altitude": "Altitud",

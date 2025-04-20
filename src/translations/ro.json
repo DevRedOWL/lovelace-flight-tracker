@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Zboruri în zonă",
       "title": "Zboruri",
-      "flights_count": "{count} zboruri",
+      "flights_count": "Zboruri: {count}",
       "departure": "Plecare",
       "arrival": "Sosire",
       "altitude": "Altitudine",

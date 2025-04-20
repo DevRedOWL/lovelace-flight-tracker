@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Voos na área",
       "title": "Voos",
-      "flights_count": "{count} voos",
+      "flights_count": "Voos: {count}",
       "departure": "Partida",
       "arrival": "Chegada",
       "altitude": "Altitude",

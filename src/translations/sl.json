@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Leti na območju",
       "title": "Leti",
-      "flights_count": "{count} letov",
+      "flights_count": "Leti: {count}",
       "departure": "Odhod",
       "arrival": "Prihod",
       "altitude": "Višina",

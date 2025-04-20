@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Lety v oblasti",
       "title": "Lety",
-      "flights_count": "{count} letov",
+      "flights_count": "Lety: {count}",
       "departure": "Odlet",
       "arrival": "Prílet",
       "altitude": "Výška",

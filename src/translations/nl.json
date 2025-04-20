@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Vluchten in de omgeving",
       "title": "Vluchten",
-      "flights_count": "{count} vluchten",
+      "flights_count": "Vluchten: {count}",
       "departure": "Vertrek",
       "arrival": "Aankomst",
       "altitude": "Hoogte",
