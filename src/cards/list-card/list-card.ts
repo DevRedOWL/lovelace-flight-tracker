@@ -245,17 +245,22 @@ export class FlightListCard extends LitElement {
         `;
     }
 
+    private _getFlagEmoji(countryCode: string): string {
+        if (!countryCode) return '';
+        const codePoints = countryCode
+            .toUpperCase()
+            .split('')
+            .map(char => 127397 + char.charCodeAt(0));
+        return String.fromCodePoint(...codePoints);
+    }
+
     private _renderLocation(city?: string, countryCode?: string): TemplateResult {
         if (!city) return html``;
         
         return html`
             <div class="location">
                 ${countryCode ? html`
-                    <img 
-                        src="https://flagcdn.com/w20/${countryCode.toLowerCase()}.png"
-                        alt="${countryCode}"
-                        class="flag"
-                    />
+                    <span class="flag">${this._getFlagEmoji(countryCode)}</span>
                 ` : ''}
                 <span>${city}</span>
             </div>
@@ -346,6 +351,10 @@ export class FlightListCard extends LitElement {
             .flag {
                 width: 16px;
                 height: 16px;
+                font-size: 16px;
+                line-height: 1;
+                display: inline-block;
+                vertical-align: middle;
             }
             .schedule, .stats {
                 display: flex;
