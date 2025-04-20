@@ -143,6 +143,16 @@ export class FlightListCard extends LitElement {
                             </mwc-button>
                         </div>
                     ` : ''}
+                    ${this._expanded && flights.length > maxFlights ? html`
+                        <div class="show-less">
+                            <mwc-button 
+                                @click=${this._toggleExpanded}
+                                class="show-less-button"
+                            >
+                                ${this._localize("card.flight.show_less")}
+                            </mwc-button>
+                        </div>
+                    ` : ''}
                 </div>
             </ha-card>
         `;
@@ -353,12 +363,12 @@ export class FlightListCard extends LitElement {
                 transition: transform 0.3s ease;
                 color: var(--primary-text-color);
             }
-            .show-more {
+            .show-more, .show-less {
                 display: flex;
                 justify-content: center;
                 margin-top: 16px;
             }
-            .show-more-button {
+            .show-more-button, .show-less-button {
                 --mdc-theme-primary: var(--primary-color);
             }
         `;

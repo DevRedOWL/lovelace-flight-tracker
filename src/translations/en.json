@@ -15,6 +15,7 @@
       "live": "Live",
       "historical": "Historical",
       "show_more": "Show More",
+      "show_less": "Show Less",
       "max_flights": "Maximum number of flights to show",
       "show_header": "Show header",
       "display_fields": "Display fields",
