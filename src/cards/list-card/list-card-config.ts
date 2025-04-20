@@ -3,7 +3,8 @@ export enum DisplayField {
     ALTITUDE = 'altitude',
     SPEED = 'speed',
     HEADING_ICON = 'heading_icon',
-    AIRCRAFT_MODEL = 'aircraft_model'
+    AIRCRAFT_MODEL = 'aircraft_model',
+    AIRPORT_ICAO = 'airport_icao'
 }
 
 export interface FlightListCardConfig {

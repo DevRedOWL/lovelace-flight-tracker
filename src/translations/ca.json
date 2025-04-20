@@ -14,21 +14,22 @@
       "kmh": "km/h",
       "live": "En directe",
       "historical": "Històric",
-      "show_more": "Mostra més",
-      "show_less": "Mostra menys",
+      "show_more": "Mostrar més",
+      "show_less": "Mostrar menys",
       "max_flights": "Nombre màxim de vols a mostrar",
-      "show_header": "Mostra capçalera",
+      "show_header": "Mostrar capçalera",
       "display_fields": "Camps a mostrar",
       "departure_arrival_time": "Hores de sortida i arribada",
       "heading_icon": "Indicador de direcció",
       "aircraft_model": "Model d'aeronau",
+      "airport_icao": "Codis ICAO de l'aeroport",
       "entity": "Entitat del sensor",
       "name": "Nom de la targeta",
       "fields": {
         "entity": "Entitat del sensor",
         "name": "Nom de la targeta",
         "max_flights": "Nombre màxim de vols",
-        "show_header": "Mostra capçalera",
+        "show_header": "Mostrar capçalera",
         "display_fields": "Camps a mostrar"
       }
     }

@@ -22,6 +22,7 @@
       "departure_arrival_time": "أوقات المغادرة والوصول",
       "heading_icon": "مؤشر الاتجاه",
       "aircraft_model": "نموذج الطائرة",
+      "airport_icao": "رموز ICAO للمطارات",
       "entity": "كيان المستشعر",
       "name": "اسم البطاقة",
       "fields": {

@@ -18,18 +18,19 @@
       "show_less": "Покажи по-малко",
       "max_flights": "Максимален брой полети за показване",
       "show_header": "Покажи заглавие",
-      "display_fields": "Показвани полета",
-      "departure_arrival_time": "Време на излитане и пристигане",
+      "display_fields": "Полета за показване",
+      "departure_arrival_time": "Часове на излитане и пристигане",
       "heading_icon": "Индикатор за посока",
-      "aircraft_model": "Модел на самолета",
-      "entity": "Сензорен елемент",
+      "aircraft_model": "Модел на самолет",
+      "airport_icao": "ICAO кодове на летището",
+      "entity": "Сензорна единица",
       "name": "Име на картата",
       "fields": {
-        "entity": "Сензорен елемент",
+        "entity": "Сензорна единица",
         "name": "Име на картата",
         "max_flights": "Максимален брой полети",
         "show_header": "Покажи заглавие",
-        "display_fields": "Показвани полета"
+        "display_fields": "Полета за показване"
       }
     }
   }

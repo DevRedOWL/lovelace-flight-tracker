@@ -21,7 +21,8 @@
       "display_fields": "Megjelenítendő mezők",
       "departure_arrival_time": "Indulási és érkezési időpontok",
       "heading_icon": "Irányjelző",
-      "aircraft_model": "Repülőgép típusa",
+      "aircraft_model": "Repülőgép modell",
+      "airport_icao": "Repülőtér ICAO kódok",
       "entity": "Érzékelő entitás",
       "name": "Kártya neve",
       "fields": {

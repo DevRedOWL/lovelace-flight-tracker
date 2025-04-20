@@ -117,6 +117,10 @@ export class FlightCardEditor extends LitElement {
                                         {
                                             value: DisplayField.AIRCRAFT_MODEL,
                                             label: this._localize("card.flight.aircraft_model")
+                                        },
+                                        {
+                                            value: DisplayField.AIRPORT_ICAO,
+                                            label: this._localize("card.flight.airport_icao")
                                         }
                                     ]
                                 }

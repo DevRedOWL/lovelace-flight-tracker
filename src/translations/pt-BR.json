@@ -22,6 +22,7 @@
       "departure_arrival_time": "Horários de partida e chegada",
       "heading_icon": "Indicador de direção",
       "aircraft_model": "Modelo da aeronave",
+      "airport_icao": "Códigos ICAO do aeroporto",
       "entity": "Entidade do sensor",
       "name": "Nome do cartão",
       "fields": {

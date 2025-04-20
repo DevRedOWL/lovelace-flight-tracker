@@ -22,10 +22,11 @@
       "departure_arrival_time": "Lähtö- ja saapumisajat",
       "heading_icon": "Suuntailmaisin",
       "aircraft_model": "Lentokonemalli",
-      "entity": "Anturiyksikkö",
+      "airport_icao": "Lentokentän ICAO-koodit",
+      "entity": "Anturi-entiteetti",
       "name": "Kortin nimi",
       "fields": {
-        "entity": "Anturiyksikkö",
+        "entity": "Anturi-entiteetti",
         "name": "Kortin nimi",
         "max_flights": "Lentojen enimmäismäärä",
         "show_header": "Näytä otsikko",

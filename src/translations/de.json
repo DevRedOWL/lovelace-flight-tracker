@@ -22,6 +22,7 @@
       "departure_arrival_time": "Abflug- und Ankunftszeiten",
       "heading_icon": "Richtungsanzeiger",
       "aircraft_model": "Flugzeugmodell",
+      "airport_icao": "Flughafen ICAO-Codes",
       "entity": "Sensor-Entität",
       "name": "Kartenname",
       "fields": {

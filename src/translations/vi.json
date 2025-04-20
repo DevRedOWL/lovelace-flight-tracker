@@ -22,6 +22,7 @@
       "departure_arrival_time": "Thời gian khởi hành và đến",
       "heading_icon": "Chỉ báo hướng",
       "aircraft_model": "Mẫu máy bay",
+      "airport_icao": "Mã ICAO sân bay",
       "entity": "Thực thể cảm biến",
       "name": "Tên thẻ",
       "fields": {

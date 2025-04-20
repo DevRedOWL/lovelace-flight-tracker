@@ -22,6 +22,7 @@
       "departure_arrival_time": "Avgangs- og ankomsttider",
       "heading_icon": "Retningsindikator",
       "aircraft_model": "Flymodell",
+      "airport_icao": "Flyplass ICAO-koder",
       "entity": "Sensor enhet",
       "name": "Kortnavn",
       "fields": {

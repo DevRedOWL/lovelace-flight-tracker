@@ -1,7 +1,7 @@
 {
   "card": {
     "flight": {
-      "default_name": "Leti na območju",
+      "default_name": "Leti v območju",
       "title": "Leti",
       "flights_count": "Leti: {count}",
       "departure": "Odhod",
@@ -22,6 +22,7 @@
       "departure_arrival_time": "Časi odhoda in prihoda",
       "heading_icon": "Indikator smeri",
       "aircraft_model": "Model letala",
+      "airport_icao": "Kode ICAO letališča",
       "entity": "Senzorska entiteta",
       "name": "Ime kartice",
       "fields": {

@@ -16,8 +16,10 @@ interface Flight {
     aircraft_model?: string;
     airport_origin_city?: string;
     airport_origin_country_code?: string;
+    airport_origin_code_icao?: string;
     airport_destination_city?: string;
     airport_destination_country_code?: string;
+    airport_destination_code_icao?: string;
     time_scheduled_departure?: string;
     time_scheduled_arrival?: string;
     altitude?: number;
@@ -48,7 +50,13 @@ export class FlightListCard extends LitElement {
             entity: "sensor.flightradar24_current_in_area",
             name: "",
             show_header: true,
-            display_fields: [DisplayField.AIRCRAFT_MODEL, DisplayField.DEPARTURE_ARRIVAL_TIME, DisplayField.ALTITUDE, DisplayField.SPEED, DisplayField.HEADING_ICON],
+            display_fields: [
+                DisplayField.AIRCRAFT_MODEL, 
+                DisplayField.DEPARTURE_ARRIVAL_TIME, 
+                DisplayField.ALTITUDE, 
+                DisplayField.SPEED, 
+                DisplayField.HEADING_ICON
+            ],
             max_flights: 5
         };
     }
@@ -214,9 +222,9 @@ export class FlightListCard extends LitElement {
                 ${flight.airport_origin_city || flight.airport_destination_city ? html`
                     <div class="flight-details">
                         <div class="route">
-                            ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code)}
+                            ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code, flight.airport_origin_code_icao)}
                             <ha-icon icon="mdi:arrow-right"></ha-icon>
-                            ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code)}
+                            ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code, flight.airport_destination_code_icao)}
                         </div>
                         ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
                             <div class="schedule">
@@ -254,15 +262,22 @@ export class FlightListCard extends LitElement {
         return String.fromCodePoint(...codePoints);
     }
 
-    private _renderLocation(city?: string, countryCode?: string): TemplateResult {
+    private _renderLocation(city?: string, countryCode?: string, icao?: string): TemplateResult {
         if (!city) return html``;
+        
+        const shouldDisplayIcao = this._config?.display_fields?.includes(DisplayField.AIRPORT_ICAO);
         
         return html`
             <div class="location">
                 ${countryCode ? html`
                     <span class="flag">${this._getFlagEmoji(countryCode)}</span>
                 ` : ''}
-                <span>${city}</span>
+                <span class="city">
+                    ${city}
+                    ${icao && shouldDisplayIcao ? html`
+                        <span class="icao">(${icao})</span>
+                    ` : ''}
+                </span>
             </div>
         `;
     }
@@ -340,6 +355,7 @@ export class FlightListCard extends LitElement {
             }
             .route {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 gap: 8px;
             }
@@ -379,6 +395,15 @@ export class FlightListCard extends LitElement {
             }
             .show-more-button, .show-less-button {
                 --mdc-theme-primary: var(--primary-color);
+            }
+            .city {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+            .icao {
+                color: var(--secondary-text-color);
+                font-size: 0.85em;
             }
         `;
     }

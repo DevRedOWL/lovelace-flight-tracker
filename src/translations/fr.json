@@ -19,9 +19,10 @@
       "max_flights": "Nombre maximum de vols à afficher",
       "show_header": "Afficher l'en-tête",
       "display_fields": "Champs à afficher",
-      "departure_arrival_time": "Heures de départ et d'arrivée",
+      "departure_arrival_time": "Horaires de départ et d'arrivée",
       "heading_icon": "Indicateur de direction",
       "aircraft_model": "Modèle d'avion",
+      "airport_icao": "Codes ICAO de l'aéroport",
       "entity": "Entité du capteur",
       "name": "Nom de la carte",
       "fields": {

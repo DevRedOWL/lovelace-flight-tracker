@@ -52,6 +52,7 @@ You can customize which information to show for each flight:
 | `speed` | Show current ground speed |
 | `heading_icon` | Show heading indicator for live flights |
 | `aircraft_model` | Show aircraft model |
+| `airport_icao` | Show airport ICAO codes in grey after city names |
 
 ## Examples
 
@@ -72,6 +73,7 @@ display_fields:
   - departure_arrival_time
   - aircraft_model
   - heading_icon
+  - airport_icao
 ```
 
 ### Minimal Display

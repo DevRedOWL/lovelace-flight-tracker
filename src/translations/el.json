@@ -22,6 +22,7 @@
       "departure_arrival_time": "Ώρες αναχώρησης και άφιξης",
       "heading_icon": "Δείκτης κατεύθυνσης",
       "aircraft_model": "Μοντέλο αεροσκάφους",
+      "airport_icao": "Κωδικοί ICAO αεροδρομίου",
       "entity": "Οντότητα αισθητήρα",
       "name": "Όνομα κάρτας",
       "fields": {

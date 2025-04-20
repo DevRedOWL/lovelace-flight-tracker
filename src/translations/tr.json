@@ -22,6 +22,7 @@
       "departure_arrival_time": "Kalkış ve varış saatleri",
       "heading_icon": "Yön göstergesi",
       "aircraft_model": "Uçak modeli",
+      "airport_icao": "Havalimanı ICAO kodları",
       "entity": "Sensör varlığı",
       "name": "Kart adı",
       "fields": {

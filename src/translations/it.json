@@ -1,12 +1,12 @@
 {
   "card": {
     "flight": {
-      "default_name": "Voli nella zona",
+      "default_name": "Voli nell'area",
       "title": "Voli",
       "flights_count": "Voli: {count}",
       "departure": "Partenza",
       "arrival": "Arrivo",
-      "altitude": "Quota",
+      "altitude": "Altitudine",
       "speed": "Velocità",
       "feet": "piedi",
       "meters": "m",
@@ -22,11 +22,12 @@
       "departure_arrival_time": "Orari di partenza e arrivo",
       "heading_icon": "Indicatore di direzione",
       "aircraft_model": "Modello aeromobile",
+      "airport_icao": "Codici ICAO aeroporto",
       "entity": "Entità sensore",
-      "name": "Nome della scheda",
+      "name": "Nome scheda",
       "fields": {
         "entity": "Entità sensore",
-        "name": "Nome della scheda",
+        "name": "Nome scheda",
         "max_flights": "Numero massimo di voli",
         "show_header": "Mostra intestazione",
         "display_fields": "Campi da visualizzare"

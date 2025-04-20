@@ -22,6 +22,7 @@
       "departure_arrival_time": "Orele de plecare și sosire",
       "heading_icon": "Indicator de direcție",
       "aircraft_model": "Model aeronavă",
+      "airport_icao": "Coduri ICAO aeroport",
       "entity": "Entitate senzor",
       "name": "Nume card",
       "fields": {

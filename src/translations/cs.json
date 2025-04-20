@@ -20,8 +20,9 @@
       "show_header": "Zobrazit hlavičku",
       "display_fields": "Zobrazovaná pole",
       "departure_arrival_time": "Časy odletu a příletu",
-      "heading_icon": "Ukazatel směru",
+      "heading_icon": "Indikátor směru",
       "aircraft_model": "Model letadla",
+      "airport_icao": "Letištní ICAO kódy",
       "entity": "Senzorová entita",
       "name": "Název karty",
       "fields": {

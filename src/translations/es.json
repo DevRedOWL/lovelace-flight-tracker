@@ -1,7 +1,7 @@
 {
   "card": {
     "flight": {
-      "default_name": "Vuelos en la zona",
+      "default_name": "Vuelos en el área",
       "title": "Vuelos",
       "flights_count": "Vuelos: {count}",
       "departure": "Salida",
@@ -19,9 +19,10 @@
       "max_flights": "Número máximo de vuelos a mostrar",
       "show_header": "Mostrar encabezado",
       "display_fields": "Campos a mostrar",
-      "departure_arrival_time": "Horas de salida y llegada",
+      "departure_arrival_time": "Horarios de salida y llegada",
       "heading_icon": "Indicador de dirección",
       "aircraft_model": "Modelo de aeronave",
+      "airport_icao": "Códigos ICAO del aeropuerto",
       "entity": "Entidad del sensor",
       "name": "Nombre de la tarjeta",
       "fields": {

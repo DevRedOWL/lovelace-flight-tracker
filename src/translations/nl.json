@@ -1,7 +1,7 @@
 {
   "card": {
     "flight": {
-      "default_name": "Vluchten in de omgeving",
+      "default_name": "Vluchten in het gebied",
       "title": "Vluchten",
       "flights_count": "Vluchten: {count}",
       "departure": "Vertrek",
@@ -17,19 +17,20 @@
       "show_more": "Meer tonen",
       "show_less": "Minder tonen",
       "max_flights": "Maximaal aantal te tonen vluchten",
-      "show_header": "Koptekst tonen",
-      "display_fields": "Weergavevelden",
+      "show_header": "Header tonen",
+      "display_fields": "Weer te geven velden",
       "departure_arrival_time": "Vertrek- en aankomsttijden",
       "heading_icon": "Richtingsindicator",
       "aircraft_model": "Vliegtuigmodel",
+      "airport_icao": "Luchthaven ICAO-codes",
       "entity": "Sensor entiteit",
       "name": "Kaartnaam",
       "fields": {
         "entity": "Sensor entiteit",
         "name": "Kaartnaam",
         "max_flights": "Maximaal aantal vluchten",
-        "show_header": "Koptekst tonen",
-        "display_fields": "Weergavevelden"
+        "show_header": "Header tonen",
+        "display_fields": "Weer te geven velden"
       }
     }
   }

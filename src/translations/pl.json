@@ -22,6 +22,7 @@
       "departure_arrival_time": "Czasy wylotu i przylotu",
       "heading_icon": "Wskaźnik kierunku",
       "aircraft_model": "Model samolotu",
+      "airport_icao": "Kody ICAO lotniska",
       "entity": "Jednostka czujnika",
       "name": "Nazwa karty",
       "fields": {

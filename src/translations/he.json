@@ -22,6 +22,7 @@
       "departure_arrival_time": "שעות יציאה והגעה",
       "heading_icon": "סמן כיוון",
       "aircraft_model": "דגם מטוס",
+      "airport_icao": "קודי ICAO של שדה התעופה",
       "entity": "יישות חיישן",
       "name": "שם הכרטיס",
       "fields": {

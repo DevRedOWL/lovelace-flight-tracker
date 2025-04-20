@@ -22,6 +22,7 @@
       "departure_arrival_time": "Waktu keberangkatan dan kedatangan",
       "heading_icon": "Indikator arah",
       "aircraft_model": "Model pesawat",
+      "airport_icao": "Kode ICAO bandara",
       "entity": "Entitas sensor",
       "name": "Nama kartu",
       "fields": {

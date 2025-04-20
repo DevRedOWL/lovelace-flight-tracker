@@ -41,7 +41,16 @@ cards:
         max_flights: 1
         name: Schedule Only
         display_fields:
-          - departure_arrival_time    
+          - departure_arrival_time
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        name: Airport Info
+        display_fields:
+          - airport_icao
+  - type: grid
+    columns: 2
+    cards:      
       - type: vertical-stack    
         cards:
         - type: markdown
