@@ -1,19 +1,33 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightListCardConfig } from "./list-card-config";
+import { FlightListCardConfig, DisplayField } from "./list-card-config";
 import setupCustomlocalize from "../../localize";
+import { FLIGHT_LIST_CARD_NAME } from "./const";
 
-@customElement("flight-card-editor")
+@customElement(`${FLIGHT_LIST_CARD_NAME}-editor`)
 export class FlightCardEditor extends LitElement {
     @property({ attribute: false }) public hass!: HomeAssistant;
 
     @state() private _config?: FlightListCardConfig;
-    private _localize!: (key: string) => string;
+    @state() private _localize!: (key: string) => string;
+
+    constructor() {
+        super();
+        this._localize = setupCustomlocalize();
+    }
 
     public setConfig(config: FlightListCardConfig): void {
-        this._config = config;
-        this._localize = setupCustomlocalize(this.hass);
+        this._config = {
+            ...config,
+            type: `custom:${FLIGHT_LIST_CARD_NAME}`
+        };
+    }
+
+    protected willUpdate(changedProperties: Map<string, any>): void {
+        if (changedProperties.has('hass')) {
+            this._localize = setupCustomlocalize(this.hass);
+        }
     }
 
     protected render(): TemplateResult {
@@ -21,45 +35,96 @@ export class FlightCardEditor extends LitElement {
             return html``;
         }
 
+        const entity = this._config?.entity || '';
+        const name = this._config?.name || '';
+        const maxFlights = this._config?.max_flights?.toString() || "5";
+        const showHeader = this._config?.show_header !== false;
+        const displayFields = this._config?.display_fields || Object.values(DisplayField);
+
         return html`
             <div class="card-config">
-                <div class="config-row">
-                    <ha-entity-picker
-                        .hass=${this.hass}
-                        .value=${this._config?.entity}
-                        .label=${"Entity"}
-                        .configValue=${"entity"}
-                        @value-changed=${this._valueChanged}
-                        allow-custom-entity
-                    ></ha-entity-picker>
-                </div>
-                <div class="config-row">
-                    <paper-input
-                        .label=${"Name"}
-                        .value=${this._config?.name}
-                        .configValue=${"name"}
-                        @value-changed=${this._valueChanged}
-                    ></paper-input>
-                </div>
-                <div class="config-row">
-                    <paper-input
-                        .label=${this._localize("card.flight.max_flights")}
-                        .value=${this._config?.max_flights?.toString() || "5"}
-                        .configValue=${"max_flights"}
-                        type="number"
-                        min="1"
-                        @value-changed=${this._valueChanged}
-                    ></paper-input>
-                </div>
-                <div class="config-row">
-                    <ha-switch
-                        .checked=${this._config?.show_header !== false}
-                        .configValue=${"show_header"}
-                        @change=${this._valueChanged}
-                    >
-                        <span>${this._localize("card.flight.show_header")}</span>
-                    </ha-switch>
-                </div>
+                <ha-form
+                    .hass=${this.hass}
+                    .data=${{
+                        entity: entity,
+                        name: name,
+                        max_flights: maxFlights,
+                        show_header: showHeader,
+                        display_fields: displayFields
+                    }}
+                    .schema=${[
+                        {
+                            name: "entity",
+                            label: this._localize("card.flight.fields.entity"),
+                            selector: {
+                                entity: {
+                                    filter: {
+                                        domain: "sensor"
+                                    }
+                                }
+                            },
+                            required: true
+                        },
+                        {
+                            name: "name",
+                            label: this._localize("card.flight.fields.name"),
+                            selector: {
+                                text: {}
+                            },
+                            required: true
+                        },
+                        {
+                            name: "max_flights",
+                            label: this._localize("card.flight.fields.max_flights"),
+                            selector: {
+                                number: {
+                                    min: 1,
+                                    mode: "box"
+                                }
+                            },
+                            required: true
+                        },
+                        {
+                            name: "show_header",
+                            label: this._localize("card.flight.fields.show_header"),
+                            selector: {
+                                boolean: {}
+                            }
+                        },
+                        {
+                            name: "display_fields",
+                            label: this._localize("card.flight.fields.display_fields"),
+                            selector: {
+                                select: {
+                                    multiple: true,
+                                    options: [
+                                        {
+                                            value: DisplayField.DEPARTURE_ARRIVAL_TIME,
+                                            label: this._localize("card.flight.departure_arrival_time")
+                                        },
+                                        {
+                                            value: DisplayField.ALTITUDE,
+                                            label: this._localize("card.flight.altitude")
+                                        },
+                                        {
+                                            value: DisplayField.SPEED,
+                                            label: this._localize("card.flight.speed")
+                                        },
+                                        {
+                                            value: DisplayField.HEADING_ICON,
+                                            label: this._localize("card.flight.heading_icon")
+                                        },
+                                        {
+                                            value: DisplayField.AIRCRAFT_MODEL,
+                                            label: this._localize("card.flight.aircraft_model")
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]}
+                    @value-changed=${this._valueChanged}
+                ></ha-form>
             </div>
         `;
     }
@@ -68,23 +133,22 @@ export class FlightCardEditor extends LitElement {
         if (!this._config || !this.hass) {
             return;
         }
-        const target = ev.target as any;
-        if (this[`_${target.configValue}`] === target.value) {
+
+        const data = ev.detail.value;
+        if (!data) {
             return;
         }
-        if (target.configValue) {
-            if (target.value === "") {
-                delete this._config[target.configValue];
-            } else {
-                this._config = {
-                    ...this._config,
-                    [target.configValue]: target.value,
-                };
-            }
-        }
+
+        this._config = {
+            ...this._config,
+            ...data
+        };
+
         this.dispatchEvent(
             new CustomEvent("config-changed", {
                 detail: { config: this._config },
+                bubbles: true,
+                composed: true
             })
         );
     }
@@ -93,9 +157,6 @@ export class FlightCardEditor extends LitElement {
         return css`
             .card-config {
                 padding: 16px;
-            }
-            .config-row {
-                margin-bottom: 16px;
             }
         `;
     }

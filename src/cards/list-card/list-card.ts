@@ -39,14 +39,14 @@ export class FlightListCard extends LitElement {
     private _localize!: (key: string) => string;
 
     public static getConfigElement() {
-        return document.createElement("flight-list-card-editor");
+        return document.createElement(`${FLIGHT_LIST_CARD_NAME}-editor`);
     }
 
-    public static getStubConfig(/*hass: HomeAssistant*/): FlightListCardConfig {
+    public static getStubConfig(): FlightListCardConfig {
         return {
             type: `custom:${FLIGHT_LIST_CARD_NAME}`,
             entity: "sensor.flightradar24_current_in_area",
-            name: "Current Flights In Area",
+            name: "",
             show_header: true,
             display_fields: [DisplayField.AIRCRAFT_MODEL, DisplayField.DEPARTURE_ARRIVAL_TIME, DisplayField.ALTITUDE, DisplayField.SPEED, DisplayField.HEADING_ICON],
             max_flights: 5
@@ -63,6 +63,7 @@ export class FlightListCard extends LitElement {
 
     protected willUpdate(changedProperties: PropertyValues): void {
         if (changedProperties.has('hass') && this._config) {
+            this._localize = setupCustomlocalize(this.hass);
             this._updateFlights();
         }
     }
@@ -126,7 +127,7 @@ export class FlightListCard extends LitElement {
             <ha-card @click=${this._handleClick}>
                 ${this._config?.show_header !== false ? html`
                     <div class="card-header">
-                        <div class="name">${this._config.name || this._localize("card.flight.title")}</div>
+                        <div class="name">${this._config.name || this._localize("card.flight.default_name")}</div>
                         <div class="count">${this._localize("card.flight.flights_count").replace("{count}", flights.length.toString())}</div>
                     </div>
                 ` : ''}
@@ -200,38 +201,36 @@ export class FlightListCard extends LitElement {
                     ` : ''}
                 </div>
                 
-                ${flight.airport_origin_city && flight.airport_destination_city
-                    ? html`
-                        <div class="flight-details">
-                            <div class="route">
-                                ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code)}
-                                <ha-icon icon="mdi:arrow-right"></ha-icon>
-                                ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code)}
-                            </div>
-                            ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
-                                <div class="schedule">
-                                    ${flight.time_scheduled_departure
-                                        ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
-                                        : ""}
-                                    ${flight.time_scheduled_arrival
-                                        ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
-                                        : ""}
-                                </div>
-                            ` : ''}
-                            ${(shouldDisplay(DisplayField.ALTITUDE) || shouldDisplay(DisplayField.SPEED)) && 
-                              (flight.altitude !== undefined || flight.ground_speed !== undefined) ? html`
-                                <div class="stats">
-                                    ${shouldDisplay(DisplayField.ALTITUDE) && flight.altitude !== undefined ? html`
-                                        <div>${this._localize("card.flight.altitude")}: ${flight.altitude} ${this._localize("card.flight.feet")} (${Math.round(flight.altitude * 0.3048)} ${this._localize("card.flight.meters")})</div>
-                                    ` : ''}
-                                    ${shouldDisplay(DisplayField.SPEED) && flight.ground_speed !== undefined ? html`
-                                        <div>${this._localize("card.flight.speed")}: ${flight.ground_speed} ${this._localize("card.flight.knots")} (${Math.round(flight.ground_speed * 1.852)} ${this._localize("card.flight.kmh")})</div>
-                                    ` : ''}
-                                </div>
-                            ` : ''}
+                ${flight.airport_origin_city || flight.airport_destination_city ? html`
+                    <div class="flight-details">
+                        <div class="route">
+                            ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code)}
+                            <ha-icon icon="mdi:arrow-right"></ha-icon>
+                            ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code)}
                         </div>
-                    `
-                    : ""}
+                        ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
+                            <div class="schedule">
+                                ${flight.time_scheduled_departure
+                                    ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
+                                    : ""}
+                                ${flight.time_scheduled_arrival
+                                    ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
+                                    : ""}
+                            </div>
+                        ` : ''}
+                        
+                        ${(flight.altitude !== undefined || flight.ground_speed !== undefined) ? html`
+                            <div class="stats">
+                                ${shouldDisplay(DisplayField.ALTITUDE) && flight.altitude !== undefined ? html`
+                                    <div>${this._localize("card.flight.altitude")}: ${flight.altitude} ${this._localize("card.flight.feet")} (${Math.round(flight.altitude * 0.3048)} ${this._localize("card.flight.meters")})</div>
+                                ` : ''}
+                                ${shouldDisplay(DisplayField.SPEED) && flight.ground_speed !== undefined ? html`
+                                    <div>${this._localize("card.flight.speed")}: ${flight.ground_speed} ${this._localize("card.flight.knots")} (${Math.round(flight.ground_speed * 1.852)} ${this._localize("card.flight.kmh")})</div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                    </div>
+                ` : ''}
             </div>
         `;
     }
@@ -241,14 +240,14 @@ export class FlightListCard extends LitElement {
         
         return html`
             <div class="location">
-                <span class="city">${city}</span>
-                ${countryCode
-                    ? html`<img 
-                        src="https://flagsapi.com/${countryCode}/shiny/16.png" 
+                ${countryCode ? html`
+                    <img 
+                        src="https://flagcdn.com/w20/${countryCode.toLowerCase()}.png"
                         alt="${countryCode}"
                         class="flag"
-                    />`
-                    : ""}
+                    />
+                ` : ''}
+                <span>${city}</span>
             </div>
         `;
     }

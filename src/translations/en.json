@@ -1,6 +1,7 @@
 {
   "card": {
     "flight": {
+      "default_name": "Flights in area",
       "title": "Flights",
       "flights_count": "{count} flights",
       "departure": "Departure",
@@ -14,7 +15,21 @@
       "live": "Live",
       "historical": "Historical",
       "show_more": "Show More",
-      "max_flights": "Maximum number of flights to show"
+      "max_flights": "Maximum number of flights to show",
+      "show_header": "Show header",
+      "display_fields": "Display fields",
+      "departure_arrival_time": "Departure and arrival times",
+      "heading_icon": "Heading indicator",
+      "aircraft_model": "Aircraft model",
+      "entity": "Sensor entity",
+      "name": "Card name",
+      "fields": {
+        "entity": "Sensor entity",
+        "name": "Card name",
+        "max_flights": "Maximum number of flights",
+        "show_header": "Show header",
+        "display_fields": "Display fields"
+      }
     }
   }
 } 
