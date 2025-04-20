@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Zboruri în zonă",
+      "title": "Zboruri",
+      "flights_count": "{count} zboruri",
+      "departure": "Plecare",
+      "arrival": "Sosire",
+      "altitude": "Altitudine",
+      "speed": "Viteză",
+      "feet": "picioare",
+      "meters": "m",
+      "knots": "noduri",
+      "kmh": "km/h",
+      "live": "Live",
+      "historical": "Istoric",
+      "show_more": "Afișează mai mult",
+      "show_less": "Afișează mai puțin",
+      "max_flights": "Număr maxim de zboruri de afișat",
+      "show_header": "Afișează antet",
+      "display_fields": "Câmpuri de afișat",
+      "departure_arrival_time": "Orele de plecare și sosire",
+      "heading_icon": "Indicator de direcție",
+      "aircraft_model": "Model aeronavă",
+      "entity": "Entitate senzor",
+      "name": "Nume card",
+      "fields": {
+        "entity": "Entitate senzor",
+        "name": "Nume card",
+        "max_flights": "Număr maxim de zboruri",
+        "show_header": "Afișează antet",
+        "display_fields": "Câmpuri de afișat"
+      }
+    }
+  }
+} 

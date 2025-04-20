@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Flüge in der Umgebung",
+      "title": "Flüge",
+      "flights_count": "{count} Flüge",
+      "departure": "Abflug",
+      "arrival": "Ankunft",
+      "altitude": "Höhe",
+      "speed": "Geschwindigkeit",
+      "feet": "Fuß",
+      "meters": "m",
+      "knots": "Knoten",
+      "kmh": "km/h",
+      "live": "Live",
+      "historical": "Historisch",
+      "show_more": "Mehr anzeigen",
+      "show_less": "Weniger anzeigen",
+      "max_flights": "Maximale Anzahl anzuzeigender Flüge",
+      "show_header": "Kopfzeile anzeigen",
+      "display_fields": "Anzuzeigende Felder",
+      "departure_arrival_time": "Abflug- und Ankunftszeiten",
+      "heading_icon": "Richtungsanzeiger",
+      "aircraft_model": "Flugzeugmodell",
+      "entity": "Sensor-Entität",
+      "name": "Kartenname",
+      "fields": {
+        "entity": "Sensor-Entität",
+        "name": "Kartenname",
+        "max_flights": "Maximale Anzahl Flüge",
+        "show_header": "Kopfzeile anzeigen",
+        "display_fields": "Anzuzeigende Felder"
+      }
+    }
+  }
+} 

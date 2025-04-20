@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Repülők a területen",
+      "title": "Repülők",
+      "flights_count": "{count} repülő",
+      "departure": "Indulás",
+      "arrival": "Érkezés",
+      "altitude": "Magasság",
+      "speed": "Sebesség",
+      "feet": "láb",
+      "meters": "m",
+      "knots": "csomó",
+      "kmh": "km/h",
+      "live": "Élő",
+      "historical": "Történelmi",
+      "show_more": "Továbbiak",
+      "show_less": "Kevesebb",
+      "max_flights": "Megjelenítendő repülők maximális száma",
+      "show_header": "Fejléc megjelenítése",
+      "display_fields": "Megjelenítendő mezők",
+      "departure_arrival_time": "Indulási és érkezési időpontok",
+      "heading_icon": "Irányjelző",
+      "aircraft_model": "Repülőgép típusa",
+      "entity": "Érzékelő entitás",
+      "name": "Kártya neve",
+      "fields": {
+        "entity": "Érzékelő entitás",
+        "name": "Kártya neve",
+        "max_flights": "Repülők maximális száma",
+        "show_header": "Fejléc megjelenítése",
+        "display_fields": "Megjelenítendő mezők"
+      }
+    }
+  }
+} 

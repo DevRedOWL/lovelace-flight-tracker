@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Flyg i området",
+      "title": "Flyg",
+      "flights_count": "{count} flyg",
+      "departure": "Avgång",
+      "arrival": "Ankomst",
+      "altitude": "Höjd",
+      "speed": "Hastighet",
+      "feet": "fot",
+      "meters": "m",
+      "knots": "knop",
+      "kmh": "km/h",
+      "live": "Live",
+      "historical": "Historisk",
+      "show_more": "Visa mer",
+      "show_less": "Visa mindre",
+      "max_flights": "Maximalt antal flyg att visa",
+      "show_header": "Visa rubrik",
+      "display_fields": "Visningsfält",
+      "departure_arrival_time": "Avgångs- och ankomsttider",
+      "heading_icon": "Riktningsindikator",
+      "aircraft_model": "Flygplansmodell",
+      "entity": "Sensor enhet",
+      "name": "Kortnamn",
+      "fields": {
+        "entity": "Sensor enhet",
+        "name": "Kortnamn",
+        "max_flights": "Maximalt antal flyg",
+        "show_header": "Visa rubrik",
+        "display_fields": "Visningsfält"
+      }
+    }
+  }
+} 

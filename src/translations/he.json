@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "טיסות באזור",
+      "title": "טיסות",
+      "flights_count": "{count} טיסות",
+      "departure": "יציאה",
+      "arrival": "הגעה",
+      "altitude": "גובה",
+      "speed": "מהירות",
+      "feet": "רגל",
+      "meters": "מ'",
+      "knots": "קשר",
+      "kmh": "קמ\"ש",
+      "live": "שידור חי",
+      "historical": "היסטורי",
+      "show_more": "הצג עוד",
+      "show_less": "הצג פחות",
+      "max_flights": "מספר מקסימלי של טיסות להצגה",
+      "show_header": "הצג כותרת",
+      "display_fields": "שדות להצגה",
+      "departure_arrival_time": "שעות יציאה והגעה",
+      "heading_icon": "סמן כיוון",
+      "aircraft_model": "דגם מטוס",
+      "entity": "יישות חיישן",
+      "name": "שם הכרטיס",
+      "fields": {
+        "entity": "יישות חיישן",
+        "name": "שם הכרטיס",
+        "max_flights": "מספר מקסימלי של טיסות",
+        "show_header": "הצג כותרת",
+        "display_fields": "שדות להצגה"
+      }
+    }
+  }
+} 

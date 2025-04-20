@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Vuelos en la zona",
+      "title": "Vuelos",
+      "flights_count": "{count} vuelos",
+      "departure": "Salida",
+      "arrival": "Llegada",
+      "altitude": "Altitud",
+      "speed": "Velocidad",
+      "feet": "pies",
+      "meters": "m",
+      "knots": "nudos",
+      "kmh": "km/h",
+      "live": "En directo",
+      "historical": "Histórico",
+      "show_more": "Mostrar más",
+      "show_less": "Mostrar menos",
+      "max_flights": "Número máximo de vuelos a mostrar",
+      "show_header": "Mostrar encabezado",
+      "display_fields": "Campos a mostrar",
+      "departure_arrival_time": "Horas de salida y llegada",
+      "heading_icon": "Indicador de dirección",
+      "aircraft_model": "Modelo de aeronave",
+      "entity": "Entidad del sensor",
+      "name": "Nombre de la tarjeta",
+      "fields": {
+        "entity": "Entidad del sensor",
+        "name": "Nombre de la tarjeta",
+        "max_flights": "Número máximo de vuelos",
+        "show_header": "Mostrar encabezado",
+        "display_fields": "Campos a mostrar"
+      }
+    }
+  }
+} 

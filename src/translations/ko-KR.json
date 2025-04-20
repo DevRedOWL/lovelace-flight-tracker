@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "지역 내 항공편",
+      "title": "항공편",
+      "flights_count": "{count} 항공편",
+      "departure": "출발",
+      "arrival": "도착",
+      "altitude": "고도",
+      "speed": "속도",
+      "feet": "피트",
+      "meters": "m",
+      "knots": "노트",
+      "kmh": "km/h",
+      "live": "실시간",
+      "historical": "과거",
+      "show_more": "더 보기",
+      "show_less": "간략히",
+      "max_flights": "표시할 최대 항공편 수",
+      "show_header": "헤더 표시",
+      "display_fields": "표시 필드",
+      "departure_arrival_time": "출발 및 도착 시간",
+      "heading_icon": "방향 표시기",
+      "aircraft_model": "항공기 모델",
+      "entity": "센서 엔티티",
+      "name": "카드 이름",
+      "fields": {
+        "entity": "센서 엔티티",
+        "name": "카드 이름",
+        "max_flights": "최대 항공편 수",
+        "show_header": "헤더 표시",
+        "display_fields": "표시 필드"
+      }
+    }
+  }
+} 

@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Loty w okolicy",
+      "title": "Loty",
+      "flights_count": "{count} lotów",
+      "departure": "Wylot",
+      "arrival": "Przylot",
+      "altitude": "Wysokość",
+      "speed": "Prędkość",
+      "feet": "stóp",
+      "meters": "m",
+      "knots": "węzłów",
+      "kmh": "km/h",
+      "live": "Na żywo",
+      "historical": "Historyczne",
+      "show_more": "Pokaż więcej",
+      "show_less": "Pokaż mniej",
+      "max_flights": "Maksymalna liczba lotów do wyświetlenia",
+      "show_header": "Pokaż nagłówek",
+      "display_fields": "Wyświetlane pola",
+      "departure_arrival_time": "Czasy wylotu i przylotu",
+      "heading_icon": "Wskaźnik kierunku",
+      "aircraft_model": "Model samolotu",
+      "entity": "Jednostka czujnika",
+      "name": "Nazwa karty",
+      "fields": {
+        "entity": "Jednostka czujnika",
+        "name": "Nazwa karty",
+        "max_flights": "Maksymalna liczba lotów",
+        "show_header": "Pokaż nagłówek",
+        "display_fields": "Wyświetlane pola"
+      }
+    }
+  }
+} 

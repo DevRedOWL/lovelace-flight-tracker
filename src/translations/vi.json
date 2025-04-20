@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Chuyến bay trong khu vực",
+      "title": "Chuyến bay",
+      "flights_count": "{count} chuyến bay",
+      "departure": "Khởi hành",
+      "arrival": "Đến",
+      "altitude": "Độ cao",
+      "speed": "Tốc độ",
+      "feet": "feet",
+      "meters": "m",
+      "knots": "hải lý",
+      "kmh": "km/h",
+      "live": "Chuyến bay trực tiếp",
+      "historical": "Lịch sử",
+      "show_more": "Hiển thị thêm",
+      "show_less": "Hiển thị ít hơn",
+      "max_flights": "Số chuyến bay tối đa hiển thị",
+      "show_header": "Hiển thị tiêu đề",
+      "display_fields": "Các trường hiển thị",
+      "departure_arrival_time": "Thời gian khởi hành và đến",
+      "heading_icon": "Chỉ báo hướng",
+      "aircraft_model": "Mẫu máy bay",
+      "entity": "Thực thể cảm biến",
+      "name": "Tên thẻ",
+      "fields": {
+        "entity": "Thực thể cảm biến",
+        "name": "Tên thẻ",
+        "max_flights": "Số chuyến bay tối đa",
+        "show_header": "Hiển thị tiêu đề",
+        "display_fields": "Các trường hiển thị"
+      }
+    }
+  }
+} 

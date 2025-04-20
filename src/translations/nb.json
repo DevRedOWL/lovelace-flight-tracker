@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Fly i området",
+      "title": "Fly",
+      "flights_count": "{count} fly",
+      "departure": "Avgang",
+      "arrival": "Ankomst",
+      "altitude": "Høyde",
+      "speed": "Hastighet",
+      "feet": "fot",
+      "meters": "m",
+      "knots": "knop",
+      "kmh": "km/t",
+      "live": "Direkte",
+      "historical": "Historisk",
+      "show_more": "Vis mer",
+      "show_less": "Vis mindre",
+      "max_flights": "Maksimalt antall fly å vise",
+      "show_header": "Vis overskrift",
+      "display_fields": "Visningsfelt",
+      "departure_arrival_time": "Avgangs- og ankomsttider",
+      "heading_icon": "Retningsindikator",
+      "aircraft_model": "Flymodell",
+      "entity": "Sensor enhet",
+      "name": "Kortnavn",
+      "fields": {
+        "entity": "Sensor enhet",
+        "name": "Kortnavn",
+        "max_flights": "Maksimalt antall fly",
+        "show_header": "Vis overskrift",
+        "display_fields": "Visningsfelt"
+      }
+    }
+  }
+} 

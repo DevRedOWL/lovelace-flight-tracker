@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Bölgedeki uçuşlar",
+      "title": "Uçuşlar",
+      "flights_count": "{count} uçuş",
+      "departure": "Kalkış",
+      "arrival": "Varış",
+      "altitude": "İrtifa",
+      "speed": "Hız",
+      "feet": "fit",
+      "meters": "m",
+      "knots": "knot",
+      "kmh": "km/s",
+      "live": "Canlı",
+      "historical": "Geçmiş",
+      "show_more": "Daha fazla göster",
+      "show_less": "Daha az göster",
+      "max_flights": "Gösterilecek maksimum uçuş sayısı",
+      "show_header": "Başlığı göster",
+      "display_fields": "Görüntülenecek alanlar",
+      "departure_arrival_time": "Kalkış ve varış saatleri",
+      "heading_icon": "Yön göstergesi",
+      "aircraft_model": "Uçak modeli",
+      "entity": "Sensör varlığı",
+      "name": "Kart adı",
+      "fields": {
+        "entity": "Sensör varlığı",
+        "name": "Kart adı",
+        "max_flights": "Maksimum uçuş sayısı",
+        "show_header": "Başlığı göster",
+        "display_fields": "Görüntülenecek alanlar"
+      }
+    }
+  }
+} 

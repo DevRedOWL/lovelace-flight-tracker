@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Lety v oblasti",
+      "title": "Lety",
+      "flights_count": "{count} letov",
+      "departure": "Odlet",
+      "arrival": "Prílet",
+      "altitude": "Výška",
+      "speed": "Rýchlosť",
+      "feet": "stôp",
+      "meters": "m",
+      "knots": "uzlov",
+      "kmh": "km/h",
+      "live": "Naživo",
+      "historical": "Historické",
+      "show_more": "Zobraziť viac",
+      "show_less": "Zobraziť menej",
+      "max_flights": "Maximálny počet letov na zobrazenie",
+      "show_header": "Zobraziť hlavičku",
+      "display_fields": "Zobrazované polia",
+      "departure_arrival_time": "Časy odletu a príletu",
+      "heading_icon": "Indikátor smeru",
+      "aircraft_model": "Model lietadla",
+      "entity": "Senzorová entita",
+      "name": "Názov karty",
+      "fields": {
+        "entity": "Senzorová entita",
+        "name": "Názov karty",
+        "max_flights": "Maximálny počet letov",
+        "show_header": "Zobraziť hlavičku",
+        "display_fields": "Zobrazované polia"
+      }
+    }
+  }
+} 

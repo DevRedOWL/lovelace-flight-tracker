@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Полети в района",
+      "title": "Полети",
+      "flights_count": "{count} полета",
+      "departure": "Излитане",
+      "arrival": "Пристигане",
+      "altitude": "Височина",
+      "speed": "Скорост",
+      "feet": "фута",
+      "meters": "м",
+      "knots": "възела",
+      "kmh": "км/ч",
+      "live": "На живо",
+      "historical": "Исторически",
+      "show_more": "Покажи повече",
+      "show_less": "Покажи по-малко",
+      "max_flights": "Максимален брой полети за показване",
+      "show_header": "Покажи заглавие",
+      "display_fields": "Показвани полета",
+      "departure_arrival_time": "Време на излитане и пристигане",
+      "heading_icon": "Индикатор за посока",
+      "aircraft_model": "Модел на самолета",
+      "entity": "Сензорен елемент",
+      "name": "Име на картата",
+      "fields": {
+        "entity": "Сензорен елемент",
+        "name": "Име на картата",
+        "max_flights": "Максимален брой полети",
+        "show_header": "Покажи заглавие",
+        "display_fields": "Показвани полета"
+      }
+    }
+  }
+} 

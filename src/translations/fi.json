@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Lennot alueella",
+      "title": "Lennot",
+      "flights_count": "{count} lentoa",
+      "departure": "Lähtö",
+      "arrival": "Saapuminen",
+      "altitude": "Korkeus",
+      "speed": "Nopeus",
+      "feet": "jalkaa",
+      "meters": "m",
+      "knots": "solmua",
+      "kmh": "km/h",
+      "live": "Lähetys",
+      "historical": "Historiallinen",
+      "show_more": "Näytä lisää",
+      "show_less": "Näytä vähemmän",
+      "max_flights": "Näytettävien lentojen enimmäismäärä",
+      "show_header": "Näytä otsikko",
+      "display_fields": "Näytettävät kentät",
+      "departure_arrival_time": "Lähtö- ja saapumisajat",
+      "heading_icon": "Suuntailmaisin",
+      "aircraft_model": "Lentokonemalli",
+      "entity": "Anturiyksikkö",
+      "name": "Kortin nimi",
+      "fields": {
+        "entity": "Anturiyksikkö",
+        "name": "Kortin nimi",
+        "max_flights": "Lentojen enimmäismäärä",
+        "show_header": "Näytä otsikko",
+        "display_fields": "Näytettävät kentät"
+      }
+    }
+  }
+} 

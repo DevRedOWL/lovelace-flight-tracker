@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Vols a la zona",
+      "title": "Vols",
+      "flights_count": "{count} vols",
+      "departure": "Sortida",
+      "arrival": "Arribada",
+      "altitude": "Altitud",
+      "speed": "Velocitat",
+      "feet": "peus",
+      "meters": "m",
+      "knots": "nusos",
+      "kmh": "km/h",
+      "live": "En directe",
+      "historical": "Històric",
+      "show_more": "Mostra més",
+      "show_less": "Mostra menys",
+      "max_flights": "Nombre màxim de vols a mostrar",
+      "show_header": "Mostra capçalera",
+      "display_fields": "Camps a mostrar",
+      "departure_arrival_time": "Hores de sortida i arribada",
+      "heading_icon": "Indicador de direcció",
+      "aircraft_model": "Model d'aeronau",
+      "entity": "Entitat del sensor",
+      "name": "Nom de la targeta",
+      "fields": {
+        "entity": "Entitat del sensor",
+        "name": "Nom de la targeta",
+        "max_flights": "Nombre màxim de vols",
+        "show_header": "Mostra capçalera",
+        "display_fields": "Camps a mostrar"
+      }
+    }
+  }
+} 

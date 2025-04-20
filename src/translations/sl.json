@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Leti na območju",
+      "title": "Leti",
+      "flights_count": "{count} letov",
+      "departure": "Odhod",
+      "arrival": "Prihod",
+      "altitude": "Višina",
+      "speed": "Hitrost",
+      "feet": "čevljev",
+      "meters": "m",
+      "knots": "vozlov",
+      "kmh": "km/h",
+      "live": "V živo",
+      "historical": "Zgodovinski",
+      "show_more": "Pokaži več",
+      "show_less": "Pokaži manj",
+      "max_flights": "Največje število letov za prikaz",
+      "show_header": "Pokaži glavo",
+      "display_fields": "Prikazana polja",
+      "departure_arrival_time": "Časi odhoda in prihoda",
+      "heading_icon": "Indikator smeri",
+      "aircraft_model": "Model letala",
+      "entity": "Senzorska entiteta",
+      "name": "Ime kartice",
+      "fields": {
+        "entity": "Senzorska entiteta",
+        "name": "Ime kartice",
+        "max_flights": "Največje število letov",
+        "show_header": "Pokaži glavo",
+        "display_fields": "Prikazana polja"
+      }
+    }
+  }
+} 

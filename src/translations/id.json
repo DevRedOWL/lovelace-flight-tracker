@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "Penerbangan di area",
+      "title": "Penerbangan",
+      "flights_count": "{count} penerbangan",
+      "departure": "Keberangkatan",
+      "arrival": "Kedatangan",
+      "altitude": "Ketinggian",
+      "speed": "Kecepatan",
+      "feet": "kaki",
+      "meters": "m",
+      "knots": "knot",
+      "kmh": "km/jam",
+      "live": "Langsung",
+      "historical": "Historis",
+      "show_more": "Tampilkan lebih banyak",
+      "show_less": "Tampilkan lebih sedikit",
+      "max_flights": "Jumlah maksimum penerbangan yang ditampilkan",
+      "show_header": "Tampilkan header",
+      "display_fields": "Bidang yang ditampilkan",
+      "departure_arrival_time": "Waktu keberangkatan dan kedatangan",
+      "heading_icon": "Indikator arah",
+      "aircraft_model": "Model pesawat",
+      "entity": "Entitas sensor",
+      "name": "Nama kartu",
+      "fields": {
+        "entity": "Entitas sensor",
+        "name": "Nama kartu",
+        "max_flights": "Jumlah maksimum penerbangan",
+        "show_header": "Tampilkan header",
+        "display_fields": "Bidang yang ditampilkan"
+      }
+    }
+  }
+} 

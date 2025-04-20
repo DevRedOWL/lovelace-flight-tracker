@@ -1,0 +1,36 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "الرحلات في المنطقة",
+      "title": "الرحلات",
+      "flights_count": "{count} رحلة",
+      "departure": "مغادرة",
+      "arrival": "وصول",
+      "altitude": "الارتفاع",
+      "speed": "السرعة",
+      "feet": "قدم",
+      "meters": "متر",
+      "knots": "عقدة",
+      "kmh": "كم/س",
+      "live": "مباشر",
+      "historical": "تاريخي",
+      "show_more": "عرض المزيد",
+      "show_less": "عرض أقل",
+      "max_flights": "الحد الأقصى لعدد الرحلات للعرض",
+      "show_header": "عرض العنوان",
+      "display_fields": "حقول العرض",
+      "departure_arrival_time": "أوقات المغادرة والوصول",
+      "heading_icon": "مؤشر الاتجاه",
+      "aircraft_model": "نموذج الطائرة",
+      "entity": "كيان المستشعر",
+      "name": "اسم البطاقة",
+      "fields": {
+        "entity": "كيان المستشعر",
+        "name": "اسم البطاقة",
+        "max_flights": "الحد الأقصى لعدد الرحلات",
+        "show_header": "عرض العنوان",
+        "display_fields": "حقول العرض"
+      }
+    }
+  }
+} 
