@@ -206,7 +206,7 @@ export class FlightListCard extends LitElement {
                         <ha-icon 
                             icon="mdi:airplane" 
                             class="heading-icon"
-                            style="transform: rotate(${heading}deg)"
+                            style="transform: rotate(${heading - 45}deg)"
                         ></ha-icon>
                     ` : ''}
                 </div>
