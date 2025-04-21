@@ -296,7 +296,7 @@ export class FlightListCard extends LitElement {
                 border: 1px solid var(--divider-color);
                 border-radius: 8px;
                 padding: 12px;
-                margin-bottom: 12px;
+                margin-bottom: var(--grid-card-gap, 8px);
             }
             .flight.live {
                 background-color: var(--card-background-color);
@@ -375,7 +375,7 @@ export class FlightListCard extends LitElement {
             .show-more, .show-less {
                 display: flex;
                 justify-content: center;
-                margin-top: 16px;
+                margin-top: var(--grid-card-gap, 8px);
             }
             .show-more-button, .show-less-button {
                 --mdc-theme-primary: var(--primary-color);
