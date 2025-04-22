@@ -1,6 +1,6 @@
 {
   "name": "flight-tracker-cards",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Home Assistant Flight Tracker Cards",
   "main": "index.js",
   "scripts": {
