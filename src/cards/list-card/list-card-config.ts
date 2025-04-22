@@ -7,6 +7,11 @@ export enum DisplayField {
     AIRPORT_ICAO = 'airport_icao'
 }
 
+export enum Layout {
+    HORIZONTAL = 'horizontal',
+    VERTICAL = 'vertical'
+}
+
 export interface FlightListCardConfig {
     type: string;
     entity: string;
@@ -14,4 +19,5 @@ export interface FlightListCardConfig {
     max_flights?: number;
     display_fields?: DisplayField[];
     show_header?: boolean;
+    layout?: Layout;
 } 

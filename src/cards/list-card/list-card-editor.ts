@@ -1,7 +1,7 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightListCardConfig, DisplayField } from "./list-card-config";
+import { FlightListCardConfig, DisplayField, Layout } from "./list-card-config";
 import setupCustomlocalize from "../../localize";
 import { FLIGHT_LIST_CARD_NAME } from "./const";
 
@@ -40,6 +40,7 @@ export class FlightCardEditor extends LitElement {
         const maxFlights = this._config?.max_flights?.toString() || "5";
         const showHeader = this._config?.show_header !== false;
         const displayFields = this._config?.display_fields || Object.values(DisplayField);
+        const layout = this._config?.layout || Layout.HORIZONTAL;
 
         return html`
             <div class="card-config">
@@ -50,7 +51,8 @@ export class FlightCardEditor extends LitElement {
                         name: name,
                         max_flights: maxFlights,
                         show_header: showHeader,
-                        display_fields: displayFields
+                        display_fields: displayFields,
+                        layout: layout
                     }}
                     .schema=${[
                         {
@@ -89,6 +91,24 @@ export class FlightCardEditor extends LitElement {
                             label: this._localize("card.flight.fields.show_header"),
                             selector: {
                                 boolean: {}
+                            }
+                        },
+                        {
+                            name: "layout",
+                            label: this._localize("card.flight.fields.layout"),
+                            selector: {
+                                select: {
+                                    options: [
+                                        {
+                                            value: Layout.HORIZONTAL,
+                                            label: this._localize("card.flight.layout.horizontal")
+                                        },
+                                        {
+                                            value: Layout.VERTICAL,
+                                            label: this._localize("card.flight.layout.vertical")
+                                        }
+                                    ]
+                                }
                             }
                         },
                         {

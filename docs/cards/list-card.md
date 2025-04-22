@@ -19,6 +19,7 @@ The Flight List Card displays real-time flight information in a clean, organized
 - 🌓 Light and dark theme support
 - 📱 Responsive design
 - ⚙️ Customizable display options
+- ↔️ Horizontal and vertical layouts
 
 ## Configuration
 
@@ -40,6 +41,7 @@ The Flight List Card displays real-time flight information in a clean, organized
 | `max_flights` | number | 5 | Maximum number of flights to show before displaying "Show More" |
 | `display_fields` | array | All fields | Choose which information to display (see below) |
 | `show_header` | boolean | true | Show/hide the card header |
+| `layout` | string | horizontal | Card layout - either "horizontal" or "vertical" |
 
 ### Display Fields
 
@@ -53,6 +55,13 @@ You can customize which information to show for each flight:
 | `heading_icon` | Show heading indicator for live flights |
 | `aircraft_model` | Show aircraft model |
 | `airport_icao` | Show airport ICAO codes in grey after city names |
+
+### Layout Options
+
+The card supports two layout modes:
+
+- **Horizontal (default)**: Flight information is displayed in a vertical stack, with the header at the top and details below
+- **Vertical**: Flight information is displayed in a horizontal layout, with the header on the left and details on the right
 
 ## Examples
 
@@ -69,6 +78,7 @@ type: custom:flight-tracker-list-card
 entity: sensor.flightradar24_current_in_area
 name: "Current Flights"
 max_flights: 5
+layout: vertical
 display_fields:
   - departure_arrival_time
   - aircraft_model

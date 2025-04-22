@@ -1,7 +1,7 @@
 import { LitElement, html, TemplateResult, css, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
-import { FlightListCardConfig, DisplayField } from "./list-card-config";
+import { FlightListCardConfig, DisplayField, Layout } from "./list-card-config";
 import { formatTime } from "../../utils/format-time";
 import { FLIGHT_LIST_CARD_NAME } from "./const";
 import { registerCustomCard } from "../../utils/custom-cards";
@@ -50,6 +50,7 @@ export class FlightListCard extends LitElement {
             entity: "sensor.flightradar24_current_in_area",
             name: "",
             show_header: true,
+            layout: Layout.HORIZONTAL,
             display_fields: [
                 DisplayField.AIRCRAFT_MODEL, 
                 DisplayField.DEPARTURE_ARRIVAL_TIME, 
@@ -186,69 +187,76 @@ export class FlightListCard extends LitElement {
         const isLive = flight.tracked_type !== "historical";
         const heading = flight.heading || 0;
         const displayFields = this._config?.display_fields;
+        const layout = this._config?.layout || Layout.HORIZONTAL;
         
         // Helper function to check if a field should be displayed
         const shouldDisplay = (field: DisplayField) => 
             !displayFields || displayFields.includes(field);
         
         return html`
-            <div class="flight ${isLive ? "live" : "historical"}">
+            <div class="flight ${isLive ? "live" : "historical"} ${layout}">
                 <div class="flight-header">
-                    ${flight.airline_icao ? html`
-                        <img 
-                            src="https://content.airhex.com/content/logos/airlines_${flight.airline_icao}_90_90_f.png?proportions=keep" 
-                            alt="${flight.airline_short || ''}"
-                            class="airline-icon"
-                            @error=${(e: Event) => {
-                                const img = e.target as HTMLImageElement;
-                                img.style.display = 'none';
-                            }}
-                        />
-                    ` : ''}
-                    <span class="flight-number">${flight.flight_number}</span>
-                    <span class="airline">${flight.airline || ''}</span>
-                    ${shouldDisplay(DisplayField.AIRCRAFT_MODEL) ? html`
-                        <span class="aircraft">${flight.aircraft_model || ''}</span>
-                    ` : ''}
-                    ${isLive && flight.heading !== undefined && shouldDisplay(DisplayField.HEADING_ICON) ? html`
-                        <ha-icon 
-                            icon="mdi:airplane" 
-                            class="heading-icon"
-                            style="transform: rotate(${heading - 45}deg)"
-                        ></ha-icon>
-                    ` : ''}
-                </div>
-                
-                ${flight.airport_origin_city || flight.airport_destination_city ? html`
-                    <div class="flight-details">
-                        <div class="route">
-                            ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code, flight.airport_origin_code_icao)}
-                            <ha-icon icon="mdi:arrow-right"></ha-icon>
-                            ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code, flight.airport_destination_code_icao)}
-                        </div>
-                        ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
-                            <div class="schedule">
-                                ${flight.time_scheduled_departure
-                                    ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
-                                    : ""}
-                                ${flight.time_scheduled_arrival
-                                    ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
-                                    : ""}
-                            </div>
+                    <div class="span-container">
+                        ${flight.airline_icao ? html`
+                            <img 
+                                src="https://content.airhex.com/content/logos/airlines_${flight.airline_icao}_90_90_f.png?proportions=keep" 
+                                alt="${flight.airline_short || ''}"
+                                class="airline-icon"
+                                @error=${(e: Event) => {
+                                    const img = e.target as HTMLImageElement;
+                                    img.style.display = 'none';
+                                }}
+                            />
                         ` : ''}
-                        
-                        ${(flight.altitude !== undefined || flight.ground_speed !== undefined) ? html`
-                            <div class="stats">
-                                ${shouldDisplay(DisplayField.ALTITUDE) && flight.altitude !== undefined ? html`
-                                    <div>${this._localize("card.flight.altitude")}: ${flight.altitude} ${this._localize("card.flight.feet")} (${Math.round(flight.altitude * 0.3048)} ${this._localize("card.flight.meters")})</div>
-                                ` : ''}
-                                ${shouldDisplay(DisplayField.SPEED) && flight.ground_speed !== undefined ? html`
-                                    <div>${this._localize("card.flight.speed")}: ${flight.ground_speed} ${this._localize("card.flight.knots")} (${Math.round(flight.ground_speed * 1.852)} ${this._localize("card.flight.kmh")})</div>
-                                ` : ''}
-                            </div>
+                        <span class="flight-number">${flight.flight_number}</span>
+                    </div>
+                    <span class="airline">${flight.airline || ''}</span>
+                    <div class="span-container">
+                        ${shouldDisplay(DisplayField.AIRCRAFT_MODEL) ? html`
+                            <span class="aircraft">${flight.aircraft_model || ''}</span>
+                        ` : ''}
+                        ${isLive && flight.heading !== undefined && shouldDisplay(DisplayField.HEADING_ICON) ? html`
+                            <ha-icon 
+                                icon="mdi:airplane" 
+                                class="heading-icon"
+                                style="transform: rotate(${heading - 45}deg)"
+                            ></ha-icon>
                         ` : ''}
                     </div>
-                ` : ''}
+                </div>
+                
+                <div class="flight-details">
+
+                    ${flight.airport_origin_city || flight.airport_destination_city ? html`
+                    <div class="route">
+                        ${this._renderLocation(flight.airport_origin_city, flight.airport_origin_country_code, flight.airport_origin_code_icao)}
+                        <ha-icon icon="mdi:arrow-right"></ha-icon>
+                            ${this._renderLocation(flight.airport_destination_city, flight.airport_destination_country_code, flight.airport_destination_code_icao)}
+                        </div>
+                    ` : ''}
+
+                    ${shouldDisplay(DisplayField.DEPARTURE_ARRIVAL_TIME) ? html`
+                        <div class="schedule">
+                            ${flight.time_scheduled_departure
+                                ? html`<div>${this._localize("card.flight.departure")}: ${formatTime(flight.time_scheduled_departure)}</div>`
+                                : ""}
+                            ${flight.time_scheduled_arrival
+                                ? html`<div>${this._localize("card.flight.arrival")}: ${formatTime(flight.time_scheduled_arrival)}</div>`
+                                : ""}
+                        </div>
+                    ` : ''}
+                    
+                    ${(shouldDisplay(DisplayField.ALTITUDE) || shouldDisplay(DisplayField.SPEED)) && (flight.altitude !== undefined || flight.ground_speed !== undefined) ? html`
+                        <div class="stats">
+                            ${shouldDisplay(DisplayField.ALTITUDE) && flight.altitude !== undefined ? html`
+                                <div>${this._localize("card.flight.altitude")}: ${flight.altitude} ${this._localize("card.flight.feet")} (${Math.round(flight.altitude * 0.3048)} ${this._localize("card.flight.meters")})</div>
+                            ` : ''}
+                            ${shouldDisplay(DisplayField.SPEED) && flight.ground_speed !== undefined ? html`
+                                <div>${this._localize("card.flight.speed")}: ${flight.ground_speed} ${this._localize("card.flight.knots")} (${Math.round(flight.ground_speed * 1.852)} ${this._localize("card.flight.kmh")})</div>
+                            ` : ''}
+                        </div>
+                    ` : ''}
+                </div>
             </div>
         `;
     }
@@ -294,18 +302,22 @@ export class FlightListCard extends LitElement {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 16px 2px;
+                padding: 8px 2px 16px 2px;
+                flex-wrap: wrap;
             }
             .card-content {
                 padding: 0 0 16px 0;
             }
             .name {
                 font-size: 24px;
+                padding-right: 8px;
                 font-weight: 500;
+                line-height: 1.5em;
             }
             .count {
                 font-size: 14px;
                 color: var(--secondary-text-color);
+                line-height: 1.5em;
             }
             .flight {
                 border: 1px solid var(--divider-color);
@@ -319,12 +331,39 @@ export class FlightListCard extends LitElement {
             .flight.historical {
                 background-color: var(--secondary-background-color);
             }
+            .flight.horizontal {
+                display: flex;
+                flex-direction: column;
+            }
+            .flight.vertical {
+                // display: flex;
+                // flex-direction: row;
+                // gap: 16px;
+            }
+            .flight.vertical .flight-header {
+                flex: 0 0 200px;
+                align-content: center;
+                text-align: center;
+                flex-direction: column; 
+                gap: 0px;
+            }
+            .flight.vertical .flight-details {
+                flex: 1;
+                gap: 0px;
+                align-items: center;
+            }
             .flight-header {
                 display: flex;
                 align-items: center;
                 gap: 12px;
                 margin-bottom: 8px;
                 flex-wrap: wrap;
+            }
+            .span-container {
+                display: flex ;
+                gap: 8px;
+                align-content: center;
+                align-items: center;
             }
             .airline-icon {
                 width: 32px;
@@ -347,6 +386,10 @@ export class FlightListCard extends LitElement {
             .aircraft {
                 color: var(--secondary-text-color);
                 font-style: italic;
+            }
+            ha-icon.vertical > ha-svg-icon {
+                width: 16px;
+                height: 16px;
             }
             .flight-details {
                 display: flex;
@@ -377,6 +420,16 @@ export class FlightListCard extends LitElement {
                 gap: 16px;
                 font-size: 0.9em;
                 color: var(--secondary-text-color);
+            }
+            .flight.vertical .schedule, .flight.vertical .stats {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .flight.vertical .schedule > div:nth-child(1), .flight.vertical .stats > div:nth-child(1) {
+                text-align: left;
+            }
+            .flight.vertical .schedule > div:nth-child(2), .flight.vertical .stats > div:nth-child(2) {
+                text-align: right;
             }
             .warning {
                 color: var(--error-color);

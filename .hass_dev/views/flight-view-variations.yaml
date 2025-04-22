@@ -51,17 +51,16 @@ cards:
   - type: grid
     columns: 2
     cards:      
-      - type: vertical-stack    
-        cards:
-        - type: markdown
-          text_only: true
-          content: |
-            # Card without header
-        - type: custom:flight-tracker-list-card
-          entity: sensor.flightradar24_current_in_area
-          max_flights: 1
-          show_header: false
-          name: No header
-          display_fields: []    
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        layout: vertical
+        name: Vertical all fields
+      - type: custom:flight-tracker-list-card
+        entity: sensor.flightradar24_current_in_area
+        max_flights: 1
+        layout: vertical
+        name: Vertical minimalistic
+        display_fields: []           
       
   
