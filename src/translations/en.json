@@ -25,6 +25,10 @@
       "airport_icao": "Airport ICAO codes",
       "entity": "Sensor entity",
       "name": "Card name",
+      "layout": {
+        "horizontal": "Horizontal",
+        "vertical": "Vertical"
+      },
       "fields": {
         "entity": "Sensor entity",
         "name": "Card name",

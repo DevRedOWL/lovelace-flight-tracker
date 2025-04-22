@@ -18,19 +18,23 @@
       "show_less": "Pokaži manj",
       "max_flights": "Največje število letov za prikaz",
       "show_header": "Pokaži glavo",
-      "display_fields": "Prikazana polja",
+      "display_fields": "Prikazna polja",
       "departure_arrival_time": "Časi odhoda in prihoda",
       "heading_icon": "Indikator smeri",
       "aircraft_model": "Model letala",
-      "airport_icao": "Kode ICAO letališča",
-      "entity": "Senzorska entiteta",
+      "airport_icao": "Kode ICAO letališč",
+      "entity": "Entiteta senzorja",
       "name": "Ime kartice",
+      "layout": {
+        "horizontal": "Vodoravno",
+        "vertical": "Navpično"
+      },
       "fields": {
-        "entity": "Senzorska entiteta",
+        "entity": "Entiteta senzorja",
         "name": "Ime kartice",
         "max_flights": "Največje število letov",
         "show_header": "Pokaži glavo",
-        "display_fields": "Prikazana polja"
+        "display_fields": "Prikazna polja"
       }
     }
   }

@@ -12,7 +12,7 @@
       "meters": "m",
       "knots": "nudos",
       "kmh": "km/h",
-      "live": "En directo",
+      "live": "En vivo",
       "historical": "Histórico",
       "show_more": "Mostrar más",
       "show_less": "Mostrar menos",
@@ -20,11 +20,15 @@
       "show_header": "Mostrar encabezado",
       "display_fields": "Campos a mostrar",
       "departure_arrival_time": "Horarios de salida y llegada",
-      "heading_icon": "Indicador de dirección",
-      "aircraft_model": "Modelo de aeronave",
-      "airport_icao": "Códigos ICAO del aeropuerto",
+      "heading_icon": "Indicador de rumbo",
+      "aircraft_model": "Modelo de avión",
+      "airport_icao": "Códigos ICAO de aeropuertos",
       "entity": "Entidad del sensor",
       "name": "Nombre de la tarjeta",
+      "layout": {
+        "horizontal": "Horizontal",
+        "vertical": "Vertical"
+      },
       "fields": {
         "entity": "Entidad del sensor",
         "name": "Nombre de la tarjeta",

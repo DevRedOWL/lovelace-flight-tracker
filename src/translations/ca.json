@@ -20,11 +20,15 @@
       "show_header": "Mostrar capçalera",
       "display_fields": "Camps a mostrar",
       "departure_arrival_time": "Hores de sortida i arribada",
-      "heading_icon": "Indicador de direcció",
+      "heading_icon": "Indicador de rumb",
       "aircraft_model": "Model d'aeronau",
-      "airport_icao": "Codis ICAO de l'aeroport",
+      "airport_icao": "Codis ICAO dels aeroports",
       "entity": "Entitat del sensor",
       "name": "Nom de la targeta",
+      "layout": {
+        "horizontal": "Horitzontal",
+        "vertical": "Vertical"
+      },
       "fields": {
         "entity": "Entitat del sensor",
         "name": "Nom de la targeta",

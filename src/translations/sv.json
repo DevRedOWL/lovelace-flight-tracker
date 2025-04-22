@@ -23,10 +23,14 @@
       "heading_icon": "Riktningsindikator",
       "aircraft_model": "Flygplansmodell",
       "airport_icao": "Flygplats ICAO-koder",
-      "entity": "Sensor enhet",
+      "entity": "Sensor-entitet",
       "name": "Kortnamn",
+      "layout": {
+        "horizontal": "Horisontell",
+        "vertical": "Vertikal"
+      },
       "fields": {
-        "entity": "Sensor enhet",
+        "entity": "Sensor-entitet",
         "name": "Kortnamn",
         "max_flights": "Maximalt antal flyg",
         "show_header": "Visa rubrik",

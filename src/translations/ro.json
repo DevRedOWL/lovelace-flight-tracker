@@ -18,19 +18,23 @@
       "show_less": "Afișează mai puțin",
       "max_flights": "Număr maxim de zboruri de afișat",
       "show_header": "Afișează antet",
-      "display_fields": "Câmpuri de afișat",
+      "display_fields": "Câmpuri de afișare",
       "departure_arrival_time": "Orele de plecare și sosire",
       "heading_icon": "Indicator de direcție",
       "aircraft_model": "Model aeronavă",
-      "airport_icao": "Coduri ICAO aeroport",
+      "airport_icao": "Coduri ICAO aeroporturi",
       "entity": "Entitate senzor",
       "name": "Nume card",
+      "layout": {
+        "horizontal": "Orizontal",
+        "vertical": "Vertical"
+      },
       "fields": {
         "entity": "Entitate senzor",
         "name": "Nume card",
         "max_flights": "Număr maxim de zboruri",
         "show_header": "Afișează antet",
-        "display_fields": "Câmpuri de afișat"
+        "display_fields": "Câmpuri de afișare"
       }
     }
   }

@@ -17,20 +17,24 @@
       "show_more": "Mehr anzeigen",
       "show_less": "Weniger anzeigen",
       "max_flights": "Maximale Anzahl anzuzeigender Flüge",
-      "show_header": "Kopfzeile anzeigen",
-      "display_fields": "Anzuzeigende Felder",
+      "show_header": "Header anzeigen",
+      "display_fields": "Anzeigefelder",
       "departure_arrival_time": "Abflug- und Ankunftszeiten",
-      "heading_icon": "Richtungsanzeiger",
+      "heading_icon": "Kursanzeige",
       "aircraft_model": "Flugzeugmodell",
       "airport_icao": "Flughafen ICAO-Codes",
       "entity": "Sensor-Entität",
       "name": "Kartenname",
+      "layout": {
+        "horizontal": "Horizontal",
+        "vertical": "Vertikal"
+      },
       "fields": {
         "entity": "Sensor-Entität",
         "name": "Kartenname",
-        "max_flights": "Maximale Anzahl Flüge",
-        "show_header": "Kopfzeile anzeigen",
-        "display_fields": "Anzuzeigende Felder"
+        "max_flights": "Maximale Anzahl der Flüge",
+        "show_header": "Header anzeigen",
+        "display_fields": "Anzeigefelder"
       }
     }
   }

@@ -13,9 +13,9 @@
       "knots": "노트",
       "kmh": "km/h",
       "live": "실시간",
-      "historical": "과거",
+      "historical": "기록",
       "show_more": "더 보기",
-      "show_less": "간략히",
+      "show_less": "접기",
       "max_flights": "표시할 최대 항공편 수",
       "show_header": "헤더 표시",
       "display_fields": "표시 필드",
@@ -25,6 +25,10 @@
       "airport_icao": "공항 ICAO 코드",
       "entity": "센서 엔티티",
       "name": "카드 이름",
+      "layout": {
+        "horizontal": "수평",
+        "vertical": "수직"
+      },
       "fields": {
         "entity": "센서 엔티티",
         "name": "카드 이름",

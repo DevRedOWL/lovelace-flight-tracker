@@ -22,9 +22,13 @@
       "departure_arrival_time": "Orari di partenza e arrivo",
       "heading_icon": "Indicatore di direzione",
       "aircraft_model": "Modello aeromobile",
-      "airport_icao": "Codici ICAO aeroporto",
+      "airport_icao": "Codici ICAO aeroporti",
       "entity": "Entità sensore",
       "name": "Nome scheda",
+      "layout": {
+        "horizontal": "Orizzontale",
+        "vertical": "Verticale"
+      },
       "fields": {
         "entity": "Entità sensore",
         "name": "Nome scheda",

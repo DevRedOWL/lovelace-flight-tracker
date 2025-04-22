@@ -1,0 +1,41 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "エリア内のフライト",
+      "title": "フライト",
+      "flights_count": "フライト数: {count}",
+      "departure": "出発",
+      "arrival": "到着",
+      "altitude": "高度",
+      "speed": "速度",
+      "feet": "フィート",
+      "meters": "m",
+      "knots": "ノット",
+      "kmh": "km/h",
+      "live": "ライブ",
+      "historical": "履歴",
+      "show_more": "もっと見る",
+      "show_less": "閉じる",
+      "max_flights": "表示する最大フライト数",
+      "show_header": "ヘッダーを表示",
+      "display_fields": "表示フィールド",
+      "departure_arrival_time": "出発・到着時間",
+      "heading_icon": "進行方向インジケーター",
+      "aircraft_model": "機体モデル",
+      "airport_icao": "空港ICAOコード",
+      "entity": "センサーエンティティ",
+      "name": "カード名",
+      "layout": {
+        "horizontal": "水平",
+        "vertical": "垂直"
+      },
+      "fields": {
+        "entity": "センサーエンティティ",
+        "name": "カード名",
+        "max_flights": "最大フライト数",
+        "show_header": "ヘッダーを表示",
+        "display_fields": "表示フィールド"
+      }
+    }
+  }
+} 

@@ -3,13 +3,13 @@
     "flight": {
       "default_name": "الرحلات في المنطقة",
       "title": "الرحلات",
-      "flights_count": "{count} رحلة",
+      "flights_count": "الرحلات: {count}",
       "departure": "مغادرة",
       "arrival": "وصول",
       "altitude": "الارتفاع",
       "speed": "السرعة",
       "feet": "قدم",
-      "meters": "متر",
+      "meters": "م",
       "knots": "عقدة",
       "kmh": "كم/س",
       "live": "مباشر",
@@ -25,6 +25,10 @@
       "airport_icao": "رموز ICAO للمطارات",
       "entity": "كيان المستشعر",
       "name": "اسم البطاقة",
+      "layout": {
+        "horizontal": "أفقي",
+        "vertical": "عمودي"
+      },
       "fields": {
         "entity": "كيان المستشعر",
         "name": "اسم البطاقة",

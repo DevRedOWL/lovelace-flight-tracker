@@ -1,8 +1,8 @@
 {
   "card": {
     "flight": {
-      "default_name": "Letadla v oblasti",
-      "title": "Letadla",
+      "default_name": "Lety v oblasti",
+      "title": "Lety",
       "flights_count": "Lety: {count}",
       "departure": "Odlet",
       "arrival": "Přílet",
@@ -17,19 +17,23 @@
       "show_more": "Zobrazit více",
       "show_less": "Zobrazit méně",
       "max_flights": "Maximální počet letů k zobrazení",
-      "show_header": "Zobrazit hlavičku",
+      "show_header": "Zobrazit záhlaví",
       "display_fields": "Zobrazovaná pole",
       "departure_arrival_time": "Časy odletu a příletu",
       "heading_icon": "Indikátor směru",
       "aircraft_model": "Model letadla",
-      "airport_icao": "Letištní ICAO kódy",
-      "entity": "Senzorová entita",
+      "airport_icao": "Kódy ICAO letišť",
+      "entity": "Entita senzoru",
       "name": "Název karty",
+      "layout": {
+        "horizontal": "Horizontální",
+        "vertical": "Vertikální"
+      },
       "fields": {
-        "entity": "Senzorová entita",
+        "entity": "Entita senzoru",
         "name": "Název karty",
         "max_flights": "Maximální počet letů",
-        "show_header": "Zobrazit hlavičku",
+        "show_header": "Zobrazit záhlaví",
         "display_fields": "Zobrazovaná pole"
       }
     }

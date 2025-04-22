@@ -1,0 +1,41 @@
+{
+  "card": {
+    "flight": {
+      "default_name": "区域航班",
+      "title": "航班",
+      "flights_count": "航班数：{count}",
+      "departure": "起飞",
+      "arrival": "到达",
+      "altitude": "高度",
+      "speed": "速度",
+      "feet": "英尺",
+      "meters": "米",
+      "knots": "节",
+      "kmh": "公里/小时",
+      "live": "实时",
+      "historical": "历史",
+      "show_more": "显示更多",
+      "show_less": "显示更少",
+      "max_flights": "最大显示航班数",
+      "show_header": "显示标题",
+      "display_fields": "显示字段",
+      "departure_arrival_time": "起飞和到达时间",
+      "heading_icon": "航向指示器",
+      "aircraft_model": "飞机型号",
+      "airport_icao": "机场ICAO代码",
+      "entity": "传感器实体",
+      "name": "卡片名称",
+      "layout": {
+        "horizontal": "水平",
+        "vertical": "垂直"
+      },
+      "fields": {
+        "entity": "传感器实体",
+        "name": "卡片名称",
+        "max_flights": "最大航班数",
+        "show_header": "显示标题",
+        "display_fields": "显示字段"
+      }
+    }
+  }
+} 

@@ -1,12 +1,12 @@
 {
   "card": {
     "flight": {
-      "default_name": "Bölgedeki uçuşlar",
+      "default_name": "Bölgedeki Uçuşlar",
       "title": "Uçuşlar",
-      "flights_count": "Uçuşlar: {count}",
+      "flights_count": "Uçuş: {count}",
       "departure": "Kalkış",
       "arrival": "Varış",
-      "altitude": "İrtifa",
+      "altitude": "Yükseklik",
       "speed": "Hız",
       "feet": "fit",
       "meters": "m",
@@ -16,7 +16,7 @@
       "historical": "Geçmiş",
       "show_more": "Daha fazla göster",
       "show_less": "Daha az göster",
-      "max_flights": "Gösterilecek maksimum uçuş sayısı",
+      "max_flights": "Görüntülenecek maksimum uçuş sayısı",
       "show_header": "Başlığı göster",
       "display_fields": "Görüntülenecek alanlar",
       "departure_arrival_time": "Kalkış ve varış saatleri",
@@ -25,6 +25,10 @@
       "airport_icao": "Havalimanı ICAO kodları",
       "entity": "Sensör varlığı",
       "name": "Kart adı",
+      "layout": {
+        "horizontal": "Yatay",
+        "vertical": "Dikey"
+      },
       "fields": {
         "entity": "Sensör varlığı",
         "name": "Kart adı",

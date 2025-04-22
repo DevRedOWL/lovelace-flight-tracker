@@ -18,19 +18,23 @@
       "show_less": "Pokaż mniej",
       "max_flights": "Maksymalna liczba lotów do wyświetlenia",
       "show_header": "Pokaż nagłówek",
-      "display_fields": "Wyświetlane pola",
+      "display_fields": "Pola wyświetlania",
       "departure_arrival_time": "Czasy wylotu i przylotu",
-      "heading_icon": "Wskaźnik kierunku",
+      "heading_icon": "Wskaźnik kursu",
       "aircraft_model": "Model samolotu",
-      "airport_icao": "Kody ICAO lotniska",
+      "airport_icao": "Kody ICAO lotnisk",
       "entity": "Jednostka czujnika",
       "name": "Nazwa karty",
+      "layout": {
+        "horizontal": "Poziomy",
+        "vertical": "Pionowy"
+      },
       "fields": {
         "entity": "Jednostka czujnika",
         "name": "Nazwa karty",
         "max_flights": "Maksymalna liczba lotów",
         "show_header": "Pokaż nagłówek",
-        "display_fields": "Wyświetlane pola"
+        "display_fields": "Pola wyświetlania"
       }
     }
   }

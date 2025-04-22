@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Рейси в районі",
       "title": "Рейси",
-      "flights_count": "{count} рейсів",
+      "flights_count": "Рейсів: {count}",
       "departure": "Виліт",
       "arrival": "Приліт",
       "altitude": "Висота",
@@ -12,25 +12,29 @@
       "meters": "м",
       "knots": "вузлів",
       "kmh": "км/год",
-      "live": "В прямому ефірі",
+      "live": "Прямий ефір",
       "historical": "Історичні",
       "show_more": "Показати більше",
       "show_less": "Показати менше",
       "max_flights": "Максимальна кількість рейсів для відображення",
       "show_header": "Показати заголовок",
-      "display_fields": "Відображувані поля",
+      "display_fields": "Поля для відображення",
       "departure_arrival_time": "Час вильоту та прильоту",
-      "heading_icon": "Індикатор напрямку",
+      "heading_icon": "Індикатор курсу",
       "aircraft_model": "Модель літака",
-      "airport_icao": "Коди ICAO аеропорту",
-      "entity": "Сенсорна сутність",
-      "name": "Назва карти",
+      "airport_icao": "Коди ICAO аеропортів",
+      "entity": "Сутність датчика",
+      "name": "Назва картки",
+      "layout": {
+        "horizontal": "Горизонтально",
+        "vertical": "Вертикально"
+      },
       "fields": {
-        "entity": "Сенсорна сутність",
-        "name": "Назва карти",
+        "entity": "Сутність датчика",
+        "name": "Назва картки",
         "max_flights": "Максимальна кількість рейсів",
         "show_header": "Показати заголовок",
-        "display_fields": "Відображувані поля"
+        "display_fields": "Поля для відображення"
       }
     }
   }

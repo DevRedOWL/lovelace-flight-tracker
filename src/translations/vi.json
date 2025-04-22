@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Chuyến bay trong khu vực",
       "title": "Chuyến bay",
-      "flights_count": "{count} chuyến bay",
+      "flights_count": "Chuyến bay: {count}",
       "departure": "Khởi hành",
       "arrival": "Đến",
       "altitude": "Độ cao",
@@ -12,25 +12,29 @@
       "meters": "m",
       "knots": "hải lý",
       "kmh": "km/h",
-      "live": "Chuyến bay trực tiếp",
+      "live": "Trực tiếp",
       "historical": "Lịch sử",
       "show_more": "Hiển thị thêm",
-      "show_less": "Hiển thị ít hơn",
+      "show_less": "Ẩn bớt",
       "max_flights": "Số chuyến bay tối đa hiển thị",
       "show_header": "Hiển thị tiêu đề",
-      "display_fields": "Các trường hiển thị",
+      "display_fields": "Trường hiển thị",
       "departure_arrival_time": "Thời gian khởi hành và đến",
       "heading_icon": "Chỉ báo hướng",
       "aircraft_model": "Mẫu máy bay",
       "airport_icao": "Mã ICAO sân bay",
       "entity": "Thực thể cảm biến",
       "name": "Tên thẻ",
+      "layout": {
+        "horizontal": "Ngang",
+        "vertical": "Dọc"
+      },
       "fields": {
         "entity": "Thực thể cảm biến",
         "name": "Tên thẻ",
         "max_flights": "Số chuyến bay tối đa",
         "show_header": "Hiển thị tiêu đề",
-        "display_fields": "Các trường hiển thị"
+        "display_fields": "Trường hiển thị"
       }
     }
   }

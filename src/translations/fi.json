@@ -3,7 +3,7 @@
     "flight": {
       "default_name": "Lennot alueella",
       "title": "Lennot",
-      "flights_count": "Lennöt: {count}",
+      "flights_count": "Lennot: {count}",
       "departure": "Lähtö",
       "arrival": "Saapuminen",
       "altitude": "Korkeus",
@@ -14,7 +14,7 @@
       "kmh": "km/h",
       "live": "Lähetys",
       "historical": "Historiallinen",
-      "show_more": "Näytä lisää",
+      "show_more": "Näytä enemmän",
       "show_less": "Näytä vähemmän",
       "max_flights": "Näytettävien lentojen enimmäismäärä",
       "show_header": "Näytä otsikko",
@@ -22,9 +22,13 @@
       "departure_arrival_time": "Lähtö- ja saapumisajat",
       "heading_icon": "Suuntailmaisin",
       "aircraft_model": "Lentokonemalli",
-      "airport_icao": "Lentokentän ICAO-koodit",
+      "airport_icao": "Lentokenttien ICAO-koodit",
       "entity": "Anturi-entiteetti",
       "name": "Kortin nimi",
+      "layout": {
+        "horizontal": "Vaakasuora",
+        "vertical": "Pystysuora"
+      },
       "fields": {
         "entity": "Anturi-entiteetti",
         "name": "Kortin nimi",

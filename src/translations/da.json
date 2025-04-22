@@ -18,19 +18,23 @@
       "show_less": "Vis mindre",
       "max_flights": "Maksimalt antal fly at vise",
       "show_header": "Vis overskrift",
-      "display_fields": "Vis felter",
+      "display_fields": "Visningsfelter",
       "departure_arrival_time": "Afgangs- og ankomsttider",
       "heading_icon": "Retningsindikator",
       "aircraft_model": "Flymodel",
-      "airport_icao": "Lufthavn ICAO koder",
-      "entity": "Sensor enhed",
+      "airport_icao": "Lufthavns ICAO-koder",
+      "entity": "Sensor-enhed",
       "name": "Kortnavn",
+      "layout": {
+        "horizontal": "Horisontalt",
+        "vertical": "Vertikalt"
+      },
       "fields": {
-        "entity": "Sensor enhed",
+        "entity": "Sensor-enhed",
         "name": "Kortnavn",
         "max_flights": "Maksimalt antal fly",
         "show_header": "Vis overskrift",
-        "display_fields": "Vis felter"
+        "display_fields": "Visningsfelter"
       }
     }
   }

@@ -25,6 +25,10 @@
       "airport_icao": "Repülőtér ICAO kódok",
       "entity": "Érzékelő entitás",
       "name": "Kártya neve",
+      "layout": {
+        "horizontal": "Vízszintes",
+        "vertical": "Függőleges"
+      },
       "fields": {
         "entity": "Érzékelő entitás",
         "name": "Kártya neve",

@@ -1,9 +1,9 @@
 {
   "card": {
     "flight": {
-      "default_name": "Penerbangan di area",
+      "default_name": "Penerbangan di Area",
       "title": "Penerbangan",
-      "flights_count": "{count} penerbangan",
+      "flights_count": "Penerbangan: {count}",
       "departure": "Keberangkatan",
       "arrival": "Kedatangan",
       "altitude": "Ketinggian",
@@ -14,23 +14,27 @@
       "kmh": "km/jam",
       "live": "Langsung",
       "historical": "Historis",
-      "show_more": "Tampilkan lebih banyak",
-      "show_less": "Tampilkan lebih sedikit",
+      "show_more": "Tampilkan Lebih Banyak",
+      "show_less": "Tampilkan Lebih Sedikit",
       "max_flights": "Jumlah maksimum penerbangan yang ditampilkan",
       "show_header": "Tampilkan header",
-      "display_fields": "Bidang yang ditampilkan",
+      "display_fields": "Bidang tampilan",
       "departure_arrival_time": "Waktu keberangkatan dan kedatangan",
       "heading_icon": "Indikator arah",
       "aircraft_model": "Model pesawat",
       "airport_icao": "Kode ICAO bandara",
       "entity": "Entitas sensor",
       "name": "Nama kartu",
+      "layout": {
+        "horizontal": "Horizontal",
+        "vertical": "Vertikal"
+      },
       "fields": {
         "entity": "Entitas sensor",
         "name": "Nama kartu",
         "max_flights": "Jumlah maksimum penerbangan",
         "show_header": "Tampilkan header",
-        "display_fields": "Bidang yang ditampilkan"
+        "display_fields": "Bidang tampilan"
       }
     }
   }

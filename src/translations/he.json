@@ -12,25 +12,29 @@
       "meters": "מ'",
       "knots": "קשר",
       "kmh": "קמ\"ש",
-      "live": "שידור חי",
+      "live": "חי",
       "historical": "היסטורי",
       "show_more": "הצג עוד",
       "show_less": "הצג פחות",
       "max_flights": "מספר מקסימלי של טיסות להצגה",
       "show_header": "הצג כותרת",
-      "display_fields": "שדות להצגה",
-      "departure_arrival_time": "שעות יציאה והגעה",
+      "display_fields": "שדות תצוגה",
+      "departure_arrival_time": "זמני יציאה והגעה",
       "heading_icon": "סמן כיוון",
       "aircraft_model": "דגם מטוס",
-      "airport_icao": "קודי ICAO של שדה התעופה",
+      "airport_icao": "קודי ICAO של שדות תעופה",
       "entity": "יישות חיישן",
       "name": "שם הכרטיס",
+      "layout": {
+        "horizontal": "אופקי",
+        "vertical": "אנכי"
+      },
       "fields": {
         "entity": "יישות חיישן",
         "name": "שם הכרטיס",
         "max_flights": "מספר מקסימלי של טיסות",
         "show_header": "הצג כותרת",
-        "display_fields": "שדות להצגה"
+        "display_fields": "שדות תצוגה"
       }
     }
   }

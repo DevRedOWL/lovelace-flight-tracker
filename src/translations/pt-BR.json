@@ -18,19 +18,23 @@
       "show_less": "Mostrar menos",
       "max_flights": "Número máximo de voos para exibir",
       "show_header": "Mostrar cabeçalho",
-      "display_fields": "Campos para exibir",
+      "display_fields": "Campos de exibição",
       "departure_arrival_time": "Horários de partida e chegada",
-      "heading_icon": "Indicador de direção",
+      "heading_icon": "Indicador de rumo",
       "aircraft_model": "Modelo da aeronave",
-      "airport_icao": "Códigos ICAO do aeroporto",
+      "airport_icao": "Códigos ICAO dos aeroportos",
       "entity": "Entidade do sensor",
       "name": "Nome do cartão",
+      "layout": {
+        "horizontal": "Horizontal",
+        "vertical": "Vertical"
+      },
       "fields": {
         "entity": "Entidade do sensor",
         "name": "Nome do cartão",
         "max_flights": "Número máximo de voos",
         "show_header": "Mostrar cabeçalho",
-        "display_fields": "Campos para exibir"
+        "display_fields": "Campos de exibição"
       }
     }
   }

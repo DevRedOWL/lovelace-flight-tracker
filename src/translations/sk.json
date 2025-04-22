@@ -22,11 +22,15 @@
       "departure_arrival_time": "Časy odletu a príletu",
       "heading_icon": "Indikátor smeru",
       "aircraft_model": "Model lietadla",
-      "airport_icao": "Kódy ICAO letiska",
-      "entity": "Senzorová entita",
+      "airport_icao": "Kódy ICAO letísk",
+      "entity": "Entita senzora",
       "name": "Názov karty",
+      "layout": {
+        "horizontal": "Horizontálne",
+        "vertical": "Vertikálne"
+      },
       "fields": {
-        "entity": "Senzorová entita",
+        "entity": "Entita senzora",
         "name": "Názov karty",
         "max_flights": "Maximálny počet letov",
         "show_header": "Zobraziť hlavičku",

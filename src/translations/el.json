@@ -9,27 +9,31 @@
       "altitude": "Υψόμετρο",
       "speed": "Ταχύτητα",
       "feet": "πόδια",
-      "meters": "μ",
+      "meters": "m",
       "knots": "κόμβοι",
-      "kmh": "χλμ/ώρα",
+      "kmh": "km/h",
       "live": "Ζωντανά",
       "historical": "Ιστορικό",
       "show_more": "Εμφάνιση περισσότερων",
       "show_less": "Εμφάνιση λιγότερων",
       "max_flights": "Μέγιστος αριθμός πτήσεων προς εμφάνιση",
-      "show_header": "Εμφάνιση επικεφαλίδας",
+      "show_header": "Εμφάνιση κεφαλίδας",
       "display_fields": "Πεδία εμφάνισης",
       "departure_arrival_time": "Ώρες αναχώρησης και άφιξης",
       "heading_icon": "Δείκτης κατεύθυνσης",
       "aircraft_model": "Μοντέλο αεροσκάφους",
-      "airport_icao": "Κωδικοί ICAO αεροδρομίου",
+      "airport_icao": "Κωδικοί ICAO αεροδρομίων",
       "entity": "Οντότητα αισθητήρα",
       "name": "Όνομα κάρτας",
+      "layout": {
+        "horizontal": "Οριζόντια",
+        "vertical": "Κατακόρυφα"
+      },
       "fields": {
         "entity": "Οντότητα αισθητήρα",
         "name": "Όνομα κάρτας",
         "max_flights": "Μέγιστος αριθμός πτήσεων",
-        "show_header": "Εμφάνιση επικεφαλίδας",
+        "show_header": "Εμφάνιση κεφαλίδας",
         "display_fields": "Πεδία εμφάνισης"
       }
     }
